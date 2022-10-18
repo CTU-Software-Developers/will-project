@@ -28,3 +28,14 @@ textarea {
     background-color: #777;
     border-color: #fff
 }
+
+.eventimages{
+    height: 200px;
+    width: 200px;
+}
+
+#sportimage1{
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+}
