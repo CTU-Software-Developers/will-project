@@ -26,5 +26,23 @@ namespace event_management_system.Controllers
 
             return View();
         }
+        public ActionResult SportsReviews()
+        {
+            ViewBag.Message = "Your Sports Review page.";
+
+            return View();
+        }
+        public ActionResult MotorSportsReviews()
+        {
+            ViewBag.Message = "Your Motor sports Review page.";
+
+            return View();
+        }
+        public ActionResult RageExpoReviews()
+        {
+            ViewBag.Message = "Your Rage expo Review page.";
+
+            return View();
+        }
     }
 }
