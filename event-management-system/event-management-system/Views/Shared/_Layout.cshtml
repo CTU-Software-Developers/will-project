@@ -19,6 +19,9 @@
                 </button>
                 @Html.ActionLink("Event Management System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+            <div class="navbar-collapse collapse">
+                @Html.Partial("_LoginPartial")
+            </div>
         </div>
 
         </div>
