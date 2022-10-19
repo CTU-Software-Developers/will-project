@@ -6,6 +6,23 @@ After cloning open NuGet console and run below command
 ```sh
 Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
 ```
+
+### DB Creation
+Create a database in any SQL IDE
+
+```sh
+CREATE DATABASE willdatabase;
+```
+
+Afterwards connect your database to your VS and add the connection string in Web.config
+
+```sh
+<connectionStrings>
+   <add name="DefaultConnection" connectionString="Data Source=.;Initial Catalog=willdatabase;Integrated Security=True" providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
+
+
 ## Project Description
 MCSD – Software Development: Event Management System You are required to design a websites using WFC/MVC technology. The website will perform the following: 
 
