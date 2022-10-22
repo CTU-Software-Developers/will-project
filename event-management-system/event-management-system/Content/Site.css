@@ -30,51 +30,111 @@ textarea {
 }
 
 
-
 #eventHeader {
     font-size: large;
     letter-spacing: 0.5rem;
     text-align: center;
     color: black;
-    margin-top: 100px;
+    /*margin-top: 100px;*/
 }
 
-image1 {
+#image1 {
     position: relative;
-}
-#sportimage1 {
-    
-    height: 250px;
-    width: 370px;
+    /*margin-top: 100px;*/
+    left: 0px;
 }
 
 #image2 {
     position: relative;
-   
-}
-#sportimage2 {
-    height: 250px;
-    width: 370px;
+    /*margin-top: -100px;*/
+    right: 0px;
 }
 
 #image3 {
     position: relative;
-   
-}
-#sportimage3 {
-    height: 250px;
-    width: 370px;
+    /*margin-top: -200px;*/
+    left: 0px;
 }
 
-#wrap-images {
-    position: center;
-    height: 310px;
-    width: 1160px;
-   
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #777;
+    border-color: #fff
+}
+
+.eventimages {
+    height: auto;
+    width: auto;
+}
+
+.event-image {
+    text-decoration: none;
+}
+
+.Events {
     display: flex;
+    margin: 20px 0px 20px 0px;
+    height: auto;
+    width: auto;
+}
+
+.Sub-events {
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    background-color: lightgray;
+    border-radius: 10px;
+}
 
 
+#button-image {
+    padding: 5px 5px 5px 5px;
+    width: auto;
+    height: fit-content;
+    border-radius: 10px;
+}
 
+#blockquote-super-sport1 {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+    vertical-align: central;
+    border-inline-color: green;
+    width: auto;
+    height: fit-content;
+}
+
+#blockquote-super-sport2 {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+    vertical-align: central;
+    border-inline-color: red;
+    width: auto;
+    height: fit-content;
+}
+
+#blockquote-super-sport3 {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+    vertical-align: central;
+    border-inline-color: purple;
+    width: auto;
+    height: fit-content;
+}
+
+#sportimage1,
+#sportimage2,
+#sportimage3 {
+    position: relative;
+    height: 200px;
+    width: fit-content;
+}
+
+footer {
+    text-align: center;
+    background-color: lightblue;
 }
 
 
