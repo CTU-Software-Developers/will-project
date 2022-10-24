@@ -1,6 +1,7 @@
 ﻿* {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -144,9 +145,6 @@ footer {
 
 
 /*Slideshow css*/
-* {
-    box-sizing: border-box;
-}
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
