@@ -285,7 +285,11 @@
     <Content Include="Views\Home\Softball.cshtml" />
     <Content Include="Views\Home\Tennis.cshtml" />
     <Content Include="Views\Home\Baseball.cshtml" />
-    <Content Include="Views\Home\Hockeycshtml.cshtml" />
+    <Content Include="Views\Home\Hockey.cshtml" />
+    <Content Include="Views\Home\Basketball.cshtml" />
+    <Content Include="Views\Home\Rugby.cshtml" />
+    <Content Include="Views\Home\Netball.cshtml" />
+    <Content Include="Views\Home\Soccer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

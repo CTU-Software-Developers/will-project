@@ -50,5 +50,25 @@ namespace event_management_system.Controllers
         {
             return View();
         }
+        public ActionResult Netball()
+        {
+            return View();
+        }
+        public ActionResult Rugby()
+        {
+            return View();
+        }
+        public ActionResult Tennis()
+        {
+            return View();
+        }
+        public ActionResult Basketball()
+        {
+            return View();
+        }
+        public ActionResult Soccer()
+        {
+            return View();
+        }
     }
 }
