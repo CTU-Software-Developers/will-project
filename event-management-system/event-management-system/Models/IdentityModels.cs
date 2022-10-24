@@ -25,6 +25,10 @@ namespace event_management_system.Models
         {
         }
 
+        public DbSet<EventStorage> EventStorages { get; set; }
+        public DbSet<EventRevies> EventRevies { get; set; }
+        public DbSet<CodeStorage> CodeStorages { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
