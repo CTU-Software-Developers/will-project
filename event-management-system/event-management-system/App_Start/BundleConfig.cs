@@ -27,6 +27,9 @@ namespace event_management_system
                       "~/Content/site.css"));
             bundles.Add(new StyleBundle("~/Content/Sportcss").Include(
                       "~/Content/SportsReviews.css"));
+
+            bundles.Add(new StyleBundle("~/Content/SportHistory").Include(
+                      "~/Content/SportHistories.css"));
         }
     }
 }
