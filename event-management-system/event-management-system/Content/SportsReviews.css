@@ -1,0 +1,109 @@
+﻿/*THis is section is 100% created by Christopher Fabian*/
+/*Default settings*/
+* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: 0px;
+    font-family: Arial;
+}
+
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    height: 900px;
+    background-color: white;
+}
+
+#History-heading {
+    border-bottom: 2px solid black;
+}
+
+header {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#body-content {
+    margin: 0px 0px 0px 0px;
+    background-color: lightgray;
+}
+
+#wrap-content {
+    display: flex;
+    margin: auto auto auto auto;
+    width: auto;
+}
+
+#content {
+    display: inline-flex;
+    position: relative;
+    width: auto;
+    column-width: auto;
+}
+
+#left {
+    position: relative;
+    padding: 10px 10px 10px 0px;
+    margin: 10px 30px 10px 0px;
+    left: 0px;
+    width: 250px;
+    height: auto;
+    border-right: 3px solid black;
+}
+
+#right {
+    position: relative;
+    padding: 10px 10px 10px 0px;
+    margin: 10px 30px 10px 0px;
+    right: 0px;
+    width: 870px;
+    height: auto;
+}
+/*History css*/
+#History-info {
+    display: block;
+    background-color: lightgray;
+    position: relative;
+    text-align: center;
+    font-family: Arial;
+}
+
+#History-info ul li {
+    list-style: none;
+    border: 2px solid black;
+    margin: 0px 20px 10px 0px;
+    background-color: darkgrey;
+    width: 100%;
+    text-align: center;
+}
+
+#History-info ul li:hover {
+    list-style: none;
+    border: 2px solid cyan;
+    background-color: black;
+    width: 100%;
+    margin: 0px 20px 10px 0px;
+}
+
+#History-info ul li a:hover {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+#History-info ul li a {
+    color: white;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+#Future-events {
+    display: block;
+    background-color: lightgray;
+}
+
+#table-of-events {
+    display: block;
+    position: relative;
+    width: 300px;
+}

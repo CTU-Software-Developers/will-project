@@ -1,6 +1,11 @@
-﻿body {
-    padding-top: -50px;
-    padding-bottom: 20px;
+﻿* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -134,7 +139,7 @@ textarea {
 
 footer {
     text-align: center;
-    background-color: lightblue;
+    background-color: black;
 }
 
 

@@ -25,6 +25,8 @@ namespace event_management_system
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/Sportcss").Include(
+                      "~/Content/SportsReviews.css"));
         }
     }
 }
