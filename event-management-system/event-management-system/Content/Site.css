@@ -156,7 +156,6 @@ footer {
 /* Hide the images by default */
 .mySlides {
     display: none;
-    
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -233,12 +232,10 @@ footer {
         opacity: 1;
     }
 
-#newImage{
-    visibility:hidden;
+#newImage {
+    visibility: hidden;
 }
 
 img#actualImage {
     height: 500px;
-   
 }
-

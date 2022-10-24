@@ -19,5 +19,9 @@ namespace event_management_system.Models
 
         [Display(Name = "Claimed by")]
         public string Username { get; set; }
+
+        [Required]
+        [Display(Name = "Used")]
+        public Boolean IsUsed { get; set; }
     }
 }
