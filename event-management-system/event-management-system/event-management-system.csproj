@@ -169,12 +169,30 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CodeStoragesController.cs" />
+    <Compile Include="Controllers\EventReviesController.cs" />
+    <Compile Include="Controllers\EventStoragesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210191158458_InitialCreate.cs" />
+    <Compile Include="Migrations\202210191158458_InitialCreate.designer.cs">
+      <DependentUpon>202210191158458_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210211233128_Events-Codes-Models.cs" />
+    <Compile Include="Migrations\202210211233128_Events-Codes-Models.designer.cs">
+      <DependentUpon>202210211233128_Events-Codes-Models.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210211240539_Complete-Setup.cs" />
+    <Compile Include="Migrations\202210211240539_Complete-Setup.designer.cs">
+      <DependentUpon>202210211240539_Complete-Setup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CodeStorage.cs" />
+    <Compile Include="Models\EventStorage.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,9 +227,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Views\Home\Images\car_cover.jpg" />
-    <Content Include="Views\Home\Images\rAge.jpg" />
-    <Content Include="Views\Home\Images\SPORT_front.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -249,6 +264,21 @@
     <Content Include="Views\Home\SportsReviews.cshtml" />
     <Content Include="Views\Home\MotorSportsReviews.cshtml" />
     <Content Include="Views\Home\RageExpoReviews.cshtml" />
+    <Content Include="Views\EventStorages\Create.cshtml" />
+    <Content Include="Views\EventStorages\Delete.cshtml" />
+    <Content Include="Views\EventStorages\Details.cshtml" />
+    <Content Include="Views\EventStorages\Edit.cshtml" />
+    <Content Include="Views\EventStorages\Index.cshtml" />
+    <Content Include="Views\EventRevies\Create.cshtml" />
+    <Content Include="Views\EventRevies\Delete.cshtml" />
+    <Content Include="Views\EventRevies\Details.cshtml" />
+    <Content Include="Views\EventRevies\Edit.cshtml" />
+    <Content Include="Views\EventRevies\Index.cshtml" />
+    <Content Include="Views\CodeStorages\Create.cshtml" />
+    <Content Include="Views\CodeStorages\Delete.cshtml" />
+    <Content Include="Views\CodeStorages\Details.cshtml" />
+    <Content Include="Views\CodeStorages\Edit.cshtml" />
+    <Content Include="Views\CodeStorages\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -261,6 +291,17 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202210191158458_InitialCreate.resx">
+      <DependentUpon>202210191158458_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210211233128_Events-Codes-Models.resx">
+      <DependentUpon>202210211233128_Events-Codes-Models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210211240539_Complete-Setup.resx">
+      <DependentUpon>202210211240539_Complete-Setup.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
