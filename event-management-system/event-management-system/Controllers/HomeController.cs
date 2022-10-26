@@ -13,7 +13,7 @@ namespace event_management_system.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult AdminPage()
         {
             return View();
         }

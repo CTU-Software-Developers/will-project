@@ -15,7 +15,7 @@ namespace event_management_system.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: CodeStorages
-        public ActionResult Index()
+        public ActionResult CodesTable()
         {
             return View(db.CodeStorages.ToList());
         }
