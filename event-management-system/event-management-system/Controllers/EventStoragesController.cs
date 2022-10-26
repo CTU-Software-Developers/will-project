@@ -15,7 +15,7 @@ namespace event_management_system.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: EventStorages
-        public ActionResult Index()
+        public ActionResult EventsTable()
         {
             return View(db.EventStorages.ToList());
         }

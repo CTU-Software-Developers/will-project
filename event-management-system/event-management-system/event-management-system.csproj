@@ -240,7 +240,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\AdminPage.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -270,7 +270,7 @@
     <Content Include="Views\EventStorages\Delete.cshtml" />
     <Content Include="Views\EventStorages\Details.cshtml" />
     <Content Include="Views\EventStorages\Edit.cshtml" />
-    <Content Include="Views\EventStorages\Index.cshtml" />
+    <Content Include="Views\EventStorages\EventsTable.cshtml" />
     <Content Include="Views\EventRevies\Create.cshtml" />
     <Content Include="Views\EventRevies\Delete.cshtml" />
     <Content Include="Views\EventRevies\Details.cshtml" />
@@ -280,7 +280,7 @@
     <Content Include="Views\CodeStorages\Delete.cshtml" />
     <Content Include="Views\CodeStorages\Details.cshtml" />
     <Content Include="Views\CodeStorages\Edit.cshtml" />
-    <Content Include="Views\CodeStorages\Index.cshtml" />
+    <Content Include="Views\CodeStorages\CodesTable.cshtml" />
     <Content Include="Views\Home\Cricket.cshtml" />
     <Content Include="Views\Home\Softball.cshtml" />
     <Content Include="Views\Home\Tennis.cshtml" />

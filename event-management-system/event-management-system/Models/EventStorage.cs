@@ -34,6 +34,10 @@ namespace event_management_system.Models
 
         [Display(Name = "Time")]
         public DateTime EventTime { get; set; }
+
+        [Required]
+        [Display(Name = "Ticket Price")]
+        public double TicketPrice { get; set; }
     }
     public class EventRevies
     {
