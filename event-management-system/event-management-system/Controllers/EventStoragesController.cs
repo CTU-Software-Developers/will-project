@@ -123,5 +123,11 @@ namespace event_management_system.Controllers
             }
             base.Dispose(disposing);
         }
+
+        // GET: Events
+        public ActionResult EventsView()
+        {
+            return View(db.EventStorages.ToList());
+        }
     }
 }
