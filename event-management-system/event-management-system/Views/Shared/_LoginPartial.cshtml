@@ -3,14 +3,43 @@
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-    @Html.AntiForgeryToken()
+        @Html.AntiForgeryToken()
+        if (User.Identity.Name.Equals("Admin"))
+        {
+            @Styles.Render("~/Content/Hoverdrop")
+            <ul class="nav navbar-nav navbar-right">
+                <li id="hover-drop-affect">
+                    @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                    <ul id="appear-with-hover-drop">
+                        <li id="log-off-color" onclick="appear()"><a href="javascript:void(0)" >Discount / Voucher Code</a></li>
+                        <li id="log-off-color"><a href="javascript:document.getElementById('logoutForm').submit()"> Log Off</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="wrap-popup-window-area">
+                <form action="#" id="form-input">
+                    <div id="button-block">
+                        <button id="close-poped-up-box" onclick="disappear()" href="javascript:void(0)">&times;</button>
+                    </div>
+                    <div id="form-incline-element">
+                        <label id="code-text-label">Enter Code</label>
+                        <br>
+                        <input type="text" id="textdata" aria-placeholder="Enter code here..." autocomplete="off" />
+                        <input type="submit" id="submit-input"/>
+                    </div>
+                </form>
+            </div>
+            @Scripts.Render("~/bundles/Hoverdrop")
+        }
+        else if (!(User.Identity.Name.Equals("Admin")))
+        {
+            <ul class="nav navbar-nav navbar-right">
+                <li id="hover-drop-affect">
+                    @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
 
-    <ul class="nav navbar-nav navbar-right">
-        <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-    </ul>
+                <li><a href="javascript:document.getElementById('logoutForm').submit()"> Log Off</a></li>
+            </ul>
+        }
     }
 }
 else
