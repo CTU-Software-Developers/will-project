@@ -1,0 +1,102 @@
+﻿* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+#appear-with-hover-drop {
+    display: none;
+    position: absolute;
+    margin:auto auto auto auto;
+    color: white;
+    z-index: 3;
+}
+
+#hover-drop-affect:hover > #appear-with-hover-drop {
+    position: relative;
+    right: -15px;
+    list-style: none;
+    transition: ease-in-out 0.5s;
+    display: block;
+    color: lightgray;
+}
+
+#log-off-color a {
+    list-style: none;
+    text-decoration: none;
+    color: grey;
+}
+
+    #log-off-color a:first-child {
+        position: relative;
+        list-style: none;
+        text-decoration: none;
+        width: 40px;
+        height: auto;
+        color: grey;
+    }
+
+    #code-section a:hover,
+    #log-off-color a:hover {
+        list-style: none;
+        width: 20px;
+        text-decoration: none;
+        color: white;
+    }
+/*Main display element after "appear click"*/
+#wrap-popup-window-area {
+    display: none;
+    padding:20px 20px 20px 20px;
+    margin: 250px auto auto -600px;
+    border: 1px solid #000;
+    width: 300px;
+    background-color: lightgrey;
+    position: absolute;
+    z-index: 4;
+}
+
+#form-input {
+    padding: 40px 0px 40px 0px;
+    text-align: center;
+    height: 100px;
+}
+
+#button-block {
+    position: relative;
+    left: 410px;
+    height: auto;
+}
+
+#form-incline-element {
+    margin: auto auto auto auto;
+    padding: 10px 10px 40px 10px;
+    height: auto;
+    text-align: center;
+    width: auto;
+}
+#close-poped-up-box {
+    position: relative;
+    margin: 0px 0px 0px 0px;
+    text-align:center;
+    right: -50px;
+}
+#times {
+    margin: auto auto auto auto;
+    width: 20px;
+    height: auto;
+    border: 1px solid #000;
+    text-decoration:none;
+    color: #000;  
+}
+#code-text-label {
+    margin: auto auto auto auto;
+    position: relative;
+    left: -45px;
+}
+
+#submit-input {
+    margin: 5px 20px 0px 0px;
+    position: relative;
+    float: right;
+    height: auto;
+    width: 60px;
+}

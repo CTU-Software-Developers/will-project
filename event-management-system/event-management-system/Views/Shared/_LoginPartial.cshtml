@@ -1,32 +1,48 @@
 ﻿@using Microsoft.AspNet.Identity
 @if (Request.IsAuthenticated)
 {
-    if (User.Identity.GetUserName() == "Admin")
+    if (User.Identity.Name.Equals("Admin"))
     {
         using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
         {
             @Html.AntiForgeryToken()
-
+            @Styles.Render("~/Content/Hoverdrop")
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "AdminPage", "Home", routeValues: null, htmlAttributes: new { title = "Manage" })
+                <li id="hover-drop-affect">
+                    @Html.ActionLink("Hello " + User.Identity.Name + "!", "AdminPage", "Home", routeValues: null, htmlAttributes: new { title = "Manage" })
+                    <ul id="appear-with-hover-drop">
+                        <li id="log-off-color" onclick="display_popup_box()"><a href="javascript:void(0)" >Discount / Voucher Code</a></li>
+                        <li id="log-off-color"><a href="javascript:document.getElementById('logoutForm').submit()"> Log Off</a></li>
+                    </ul>
                 </li>
-                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
             </ul>
+            <div id="wrap-popup-window-area">
+                <form action="#" id="form-input">
+                    <div id="form-incline-element">
+                        <label id="code-text-label">Enter Code</label>
+                        <a id="close-poped-up-box" onclick="Hide_popup_box()" href="javascript:void(0)"><span id="times">&times;</span></a>
+                        <br>
+                        <input type="text" id="textdata" aria-placeholder="Enter code here..." autocomplete="off" />
+                        <br/>
+                        <input type="submit" id="submit-input" />
+                    </div>
+                </form>
+            </div>
+            @Scripts.Render("~/bundles/Hoverdrop")
         }
     }
-    else
+    else if (!(User.Identity.Name.Equals("Admin")))
     {
+
         using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
         {
-            @Html.AntiForgeryToken()
-
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-                </li>
-                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-            </ul>
+        @Html.AntiForgeryToken()
+        <ul class="nav navbar-nav navbar-right">
+            <li id="hover-drop-affect">
+                @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Home", routeValues: null, htmlAttributes: new { title = "Manage" })
+            </li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()"> Log Off</a></li>
+        </ul>
         }
     }
 }
