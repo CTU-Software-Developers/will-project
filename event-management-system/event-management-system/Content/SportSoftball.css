@@ -64,7 +64,6 @@ body {
 }
 /*figcaption*/
 figcaption {
-    display:block;
     width:170px;
     font-size: 8pt;
     font-weight:500;
