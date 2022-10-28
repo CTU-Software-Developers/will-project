@@ -35,8 +35,8 @@ namespace event_management_system
             bundles.Add(new StyleBundle("~/Content/Sportcss").Include(
                       "~/Content/SportsReviews.css"));
 
-            bundles.Add(new StyleBundle("~/Content/SportHistory").Include(
-                      "~/Content/SportHistories.css"));
+            bundles.Add(new StyleBundle("~/Content/Sport_softball").Include(
+                      "~/Content/SportSoftball.css"));
 
             bundles.Add(new StyleBundle("~/Content/Hoverdrop").Include(
                       "~/Content/Hoverdrop.css"));

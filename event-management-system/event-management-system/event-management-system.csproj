@@ -204,7 +204,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Hoverdrop.css" />
-    <Content Include="Content\SportHistories.css" />
+    <Content Include="Content\SportSoftball.css" />
     <Content Include="Content\SportsReviews.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -212,6 +212,23 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\car_cover.jpg" />
     <Content Include="Images\rAge.jpg" />
+    <Content Include="Images\SoftballSport\170px-Counter_for_softball_and_baseball.jpg" />
+    <Content Include="Images\SoftballSport\170px-SlowpitchTarget.jpg" />
+    <Content Include="Images\SoftballSport\170px-Softball_batter_1560583.jpg" />
+    <Content Include="Images\SoftballSport\170px-Softball_catcher_2006-04-01.jpg" />
+    <Content Include="Images\SoftballSport\220px-Exxon_Intramural_Softball_League_-_SU&amp;P_vs_Defectors_-_Field_2_-_handshakes_after_Championship_Game_-_12_Aug_1997.jpg" />
+    <Content Include="Images\SoftballSport\220px-Softball_home_plate_collision_-1507299.jpg" />
+    <Content Include="Images\SoftballSport\220px-Softball_player_fielding_1565486.jpg" />
+    <Content Include="Images\SoftballSport\220px-Tagget_out.jpg" />
+    <Content Include="Images\SoftballSport\320px-Chicago_Softball_Team_in_1897.jpg" />
+    <Content Include="Images\SoftballSport\Emma_Johnson_KSU.jpg" />
+    <Content Include="Images\SoftballSport\Exxon_Intramural_Softball_League_-_Defectors_vs_Offbase_-_Field_2_-_28_Aug_1996.jpg" />
+    <Content Include="Images\SoftballSport\Pitching_3.jpg" />
+    <Content Include="Images\SoftballSport\Softball_batter_vh.jpg" />
+    <Content Include="Images\SoftballSport\Softball_diamond_large_map.png" />
+    <Content Include="Images\SoftballSport\UCSD_Softball_158.jpg" />
+    <Content Include="Images\SoftballSport\UT_softball_2007.jpg" />
+    <Content Include="Images\SoftballSport\Yellow_softball.jpg" />
     <Content Include="Images\SPORT_front.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -296,6 +313,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\Hockey\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
