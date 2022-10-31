@@ -22,6 +22,12 @@ Afterwards connect your database to your VS and add the connection string in Web
 </connectionStrings>
 ```
 
+Then enter the next command into the NuGet console
+
+```cmd
+update-database
+```
+
 
 ## Project Description
 MCSD – Software Development: Event Management System You are required to design a websites using WFC/MVC technology. The website will perform the following: 
