@@ -206,11 +206,31 @@
     <Content Include="Content\Hoverdrop.css" />
     <Content Include="Content\SportSoftball.css" />
     <Content Include="Content\SportsReviews.css" />
+    <Content Include="Content\Sport_Hockey.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\car_cover.jpg" />
+    <Content Include="Images\Hockey\200px-21_CZE-SVK_24.jpg" />
+    <Content Include="Images\Hockey\200px-Bully_beim_Inline-Skaterhockey.jpg" />
+    <Content Include="Images\Hockey\2010ParalympicsCanadaVsSwedenIceSledgeHockey.jpg" />
+    <Content Include="Images\Hockey\2020-01-21_Ice_hockey_at_the_2020_Winter_Youth_Olympics_–_Women%27s_tournament_–_Gold_Medal_Game_%28Martin_Rulsch%29_105.jpg" />
+    <Content Include="Images\Hockey\220px-Antiek_hockey.jpg" />
+    <Content Include="Images\Hockey\220px-Argentin_player_during_2007_rink_hockey_world_championship.jpg" />
+    <Content Include="Images\Hockey\220px-Boxhockey1935.jpg" />
+    <Content Include="Images\Hockey\250px-Field_hockey.jpg" />
+    <Content Include="Images\Hockey\250px-The_Colts_applying_pressure_at_the_Battalion_net.jpg" />
+    <Content Include="Images\Hockey\300px-Mapuche_Chueca-Alonso_Ovalle.jpg" />
+    <Content Include="Images\Hockey\Bandy_game_at_Zinkensdamms_IP.jpg" />
+    <Content Include="Images\Hockey\Field_hockey_at_the_2012_Summer_Olympics_-_NZL-AUS_%287796665032%29.jpg" />
+    <Content Include="Images\Hockey\Inline-skate-adjustable.jpg" />
+    <Content Include="Images\Hockey\Kareby_IS-AIK,_13_mars_2015_32.jpg" />
+    <Content Include="Images\Hockey\Pittsburgh_Penguins_Washington_Capitals_Bryan_Rust.jpg" />
+    <Content Include="Images\Hockey\Rink-Hockey_Euroleague_2012-2013_-_Genève_vs_Hockey_Valdagno_-_16.jpg" />
+    <Content Include="Images\Hockey\Roller-skate.jpg" />
+    <Content Include="Images\Hockey\Roller_skates.jpg" />
+    <Content Include="Images\Hockey\Sled_hockey_player.jpg" />
     <Content Include="Images\rAge.jpg" />
     <Content Include="Images\SoftballSport\170px-Counter_for_softball_and_baseball.jpg" />
     <Content Include="Images\SoftballSport\170px-SlowpitchTarget.jpg" />
@@ -313,7 +333,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\Hockey\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

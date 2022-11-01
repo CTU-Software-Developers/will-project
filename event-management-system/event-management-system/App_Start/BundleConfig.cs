@@ -40,6 +40,8 @@ namespace event_management_system
 
             bundles.Add(new StyleBundle("~/Content/Hoverdrop").Include(
                       "~/Content/Hoverdrop.css"));
+            bundles.Add(new StyleBundle("~/Content/Sport_Hockey").Include(
+                      "~/Content/Sport_Hockey.css"));
         }
     }
 }
