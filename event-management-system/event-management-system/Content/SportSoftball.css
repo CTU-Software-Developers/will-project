@@ -1,0 +1,104 @@
+﻿* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: 0px;
+    font-family:Arial;
+    font-size: 12pt;
+}
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: auto;
+    height: auto;
+    background-color: #eae8e8;
+}
+#wrap-content {
+    padding: -25px 0px 0px 0px;
+    background-color: lightgray;
+    height: auto;
+    padding: 0px 30px 0px 30px;
+    border: 1px solid black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#heading {
+    text-align:center; 
+    border-bottom: 2px solid;
+    margin-bottom: 6px;
+}
+#softball-heading {
+    font-weight: 500;
+}
+#history-information {
+    text-align: left;
+    border-bottom: 2px solid;
+    margin-bottom: 6px;
+}
+#wrap-Softball-History-Content {
+    margin: 0px 30px 0px 30px;
+    line-height: 20px;
+}
+/*div element*/
+#diamond-large-map,
+#Yellow-softball,
+#gloves,
+#Uniform,
+#softball-catcher,
+#counter-for-softball,
+#slow-pitch-image,
+#softball-sport,
+#fast-pitch-throw,
+#UT-getting-batter-out,
+#batters-in-play,
+#score-runs,
+#creational-play,
+#creational-play-1,
+#Pitch,
+#pitching-styles {
+    position: static;
+    float: right;
+    background-color: darkgrey;
+    border: 1px solid #000;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+/*Figure*/
+figure {
+}
+/*figcaption*/
+figcaption {
+    position: relative;
+    float: none;
+    width: 170px;
+    font-size: 8pt;
+    font-weight: 500;
+    margin: 6px auto auto auto;
+    line-height: 1;
+    color: white;
+}
+/*img id's */
+#diamond-large-map1,
+#Yellow-softball1,
+#gloves1,
+#Uniform1,
+#softball-catcher1,
+#Umpires-element1,
+#slow-pitch-image1,
+#softball-sport1,
+#fast-pitch-throw1,
+#UT-getting-batter-out1,
+#batters-in-play1,
+#score-runs1,
+#creational-play1,
+#creational-play-1-1,
+#Pitch1,
+#pitching-styles1 {
+    border: 1px solid #000;
+    background-color: lightgrey;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+}
+h2,h3 {
+    text-decoration: underline;
+}

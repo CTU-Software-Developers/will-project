@@ -22,15 +22,27 @@ namespace event_management_system
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/bootstrap.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/Hoverdrop").Include(
+                      "~/Scripts/Hoverdrop.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/DropDown.css",
                       "~/Content/site.css"));
+
             bundles.Add(new StyleBundle("~/Content/Sportcss").Include(
                       "~/Content/SportsReviews.css"));
 
-            bundles.Add(new StyleBundle("~/Content/SportHistory").Include(
-                      "~/Content/SportHistories.css"));
+            bundles.Add(new StyleBundle("~/Content/Sport_softball").Include(
+                      "~/Content/SportSoftball.css"));
+
+            bundles.Add(new StyleBundle("~/Content/Hoverdrop").Include(
+                      "~/Content/Hoverdrop.css"));
+            bundles.Add(new StyleBundle("~/Content/Sport_Hockey").Include(
+                      "~/Content/Sport_Hockey.css"));
         }
     }
 }

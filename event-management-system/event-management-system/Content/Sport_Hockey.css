@@ -1,0 +1,129 @@
+﻿* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: 0px;
+    font-family: Arial;
+    font-size: 14pt;
+}
+
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    height: auto;
+    width: auto;
+    background-color: #eae8e8;
+}
+
+#wrap-content {
+    padding: -25px 0px 0px 0px;
+    background-color: lightgrey;
+    height: auto;
+    padding: 0px 30px 0px 30px;
+    border: 1px solid black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#heading {
+    text-align: center;
+    border-bottom: 2px solid;
+    margin-bottom: 6px;
+}
+
+#Hockey-heading {
+    font-weight: 500;
+}
+
+#wrap-Hockey-History-Content {
+
+    margin: 0px 40px 0px 40px;
+}
+.div-images {
+    height: fit-content;
+    width: fit-content;
+}
+
+#combo-img-element {
+    position: static;
+    float:right;
+}
+#combo-img-elementA {
+    position: static;
+    float: right;
+}
+
+.sport-image {
+    height: fit-content;
+    width: 200px;
+}
+.sport-image1 {
+    height: 150px;
+    width: fit-content;
+}
+
+#combo-img-element1,
+#combo-img-element2,
+#combo-img-element3 {
+    display: flex;
+    padding: 10px 10px 10px 10px;
+}
+#combo-img-element3 {
+    
+}
+
+.img-element,
+.img-element1 {
+    position: static;
+    float: right;
+    border: 1px solid black;
+    background-color: darkgrey;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+#Etymology-element,
+#subtypes-element,
+#Hockey-history-Information,
+#Field-Hoeckey-element,
+#Ice-Hockey-element,
+#Para-ice-hockey-element,
+#Inline-sledge-hockey-element,
+#Roller-hockey-inline-element,
+#Roller-hockey-quad-element,
+#Roller-hockey-quad-element,
+#Other-forms-of-hockey-element,
+#Equipment-element {
+    margin: 10px 0px 10px 0px;
+    border-bottom: 2px solid black;
+}
+/*
+h2, h3 {
+    margin: 30px 0px 5px 0px;
+    text-align: left;
+    font-weight: 600;
+}*/
+#Bandy-element,
+#Protection-element,
+#Footwear-element,
+#Roller-hockey-element {
+    text-decoration: underline;
+}
+
+.indent-paragraph {
+    margin: 10px 0px 10px 10px;
+}
+figure {
+    display: block;
+    position: relative;
+    width: 250px;
+    text-align: center;
+
+}
+figcaption {
+    font-size: 12pt;
+    font-style: italic;
+}
+ul {
+    line-height: 20px;
+    list-style: circle;
+}
