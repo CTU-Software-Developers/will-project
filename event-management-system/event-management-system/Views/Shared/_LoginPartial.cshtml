@@ -16,19 +16,25 @@
                     </ul>
                 </li>
             </ul>
-            <div id="wrap-popup-window-area">
-                <form action="#" id="form-input">
-                    <div id="form-incline-element">
-                        <label id="code-text-label">Enter Code</label>
-                        <a id="close-poped-up-box" onclick="Hide_popup_box()" href="javascript:void(0)"><span id="times">&times;</span></a>
-                        <br>
-                        <input type="text" id="textdata" aria-placeholder="Enter code here..." autocomplete="off" />
-                        <br/>
-                        <input type="submit" id="submit-input" />
-                    </div>
-                </form>
+            <div style="position:relative; display:flex; width: 65px; padding: 10px;">
+                <input type="checkbox" />
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="drop">
+                    <li>
+                        @Html.ActionLink("Event Management", "EventsTable", "EventStorages", new { area = "" }, new { @class = "" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Code Management", "CodesTable", "CodeStorages", new { area = "" }, new { @class = "" })
+                    </li>
+                    <li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                    </li>
+                </ul>
             </div>
-            @Scripts.Render("~/bundles/Hoverdrop")
         }
     }
     else if (!(User.Identity.Name.Equals("Admin")))
@@ -36,13 +42,30 @@
 
         using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
         {
-        @Html.AntiForgeryToken()
-        <ul class="nav navbar-nav navbar-right">
-            <li id="hover-drop-affect">
-                @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Home", routeValues: null, htmlAttributes: new { title = "Manage" })
-            </li>
-            <li><a href="javascript:document.getElementById('logoutForm').submit()"> Log Off</a></li>
-        </ul>
+            @Html.AntiForgeryToken()
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                </li>
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+            </ul>
+            <div style="position:relative; display:flex; width: 65px; padding: 10px;">
+                <input type="checkbox" />
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="drop">
+                    <li>
+                        Discount / Voucher Codes
+                    </li>
+                    <li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                    </li>
+                </ul>
+            </div>
         }
     }
 }
