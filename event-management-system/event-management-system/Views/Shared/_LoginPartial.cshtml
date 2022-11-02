@@ -13,6 +13,25 @@
                 </li>
                 <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
             </ul>
+            <div style="position:relative; display:flex; width: 65px; padding: 10px;">
+                <input type="checkbox" />
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="drop">
+                    <li>
+                        @Html.ActionLink("Event Management", "EventsTable", "EventStorages", new { area = "" }, new { @class = "" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Code Management", "CodesTable", "CodeStorages", new { area = "" }, new { @class = "" })
+                    </li>
+                    <li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                    </li>
+                </ul>
+            </div>
         }
     }
     else
@@ -27,6 +46,22 @@
                 </li>
                 <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
             </ul>
+            <div style="position:relative; display:flex; width: 65px; padding: 10px;">
+                <input type="checkbox" />
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="drop">
+                    <li>
+                        Discount / Voucher Codes
+                    </li>
+                    <li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                    </li>
+                </ul>
+            </div>
         }
     }
 }

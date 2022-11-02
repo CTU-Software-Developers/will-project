@@ -1,0 +1,48 @@
+﻿/* Drop down menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    .hamburger span:nth-child(1) {
+        margin-top: 5px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: black;
+        margin-bottom: 5px;
+    }
+
+input[type="checkbox"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+
+    input[type="checkbox"]:checked ~ button {
+        background-color: darkgray;
+    }
+
+.drop {
+    position: absolute;
+    top: 70%;
+    right: 0;
+    width: 200px;
+    height: 0px;
+    overflow: hidden;
+    background: #bebebe;
+    transition: all .2s ease;
+}
+
+input[type="checkbox"]:checked ~ .drop {
+    height: auto;
+    text-align: center;
+}
