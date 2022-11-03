@@ -1,0 +1,78 @@
+﻿* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: 0px;
+    font-family: Arial;
+
+}
+
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    height: auto;
+    width: auto;
+    background-color: #eae8e8;
+}
+
+#wrap-Content {
+    padding: -25px 0px 0px 0px;
+    background-color: lightgray;
+    height: auto;
+    padding: 0px 30px 0px 30px;
+    border: 1px solid black;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+#heading{
+    text-align:center;
+    border-bottom: 2px solid;
+    margin-bottom: 6px;
+}
+
+#images {
+    position: static;
+    float: right;
+}/*
+.imgs {
+    padding: 10px 10px 10px 10px;
+    background-color: grey;
+    border: 1px solid black;
+    height: fit-content;
+    width: fit-content;
+}*/
+#images1 {
+    position: static;
+    float: left;
+}
+img {
+    border: 1px solid black;
+    height: fit-content;
+    width: 200px;
+} 
+
+figcaption {
+    margin: auto auto auto auto;
+    width: 200px;
+    color: white;
+}
+
+#Hockey-heading {
+    font-weight: 500;
+}
+
+#wrap-Tennis-History-Content {
+    margin: 0px 40px 0px 40px; 
+}
+
+.indent-paragraph {
+    margin: 0px 0px 0px 30px;
+}
+
+ul {
+    margin: 0px 20px 0px 20px;
+}
+ 
+.no-styles {
+    list-style:none;
+}
