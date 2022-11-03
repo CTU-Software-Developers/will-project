@@ -43,6 +43,9 @@ namespace event_management_system
                       "~/Content/Hoverdrop.css"));
             bundles.Add(new StyleBundle("~/Content/Sport_Hockey").Include(
                       "~/Content/Sport_Hockey.css"));
+            
+            bundles.Add(new StyleBundle("~/Content/Sport_Cricket").Include(
+                      "~/Content/Sport_Cricket.css"));
         }
     }
 }
