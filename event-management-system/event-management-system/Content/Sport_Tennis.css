@@ -55,6 +55,7 @@ img {
 }
 h2,h3 {
     text-align: left;
+    text-decoration: underline;
 }
 
 #images2 {
