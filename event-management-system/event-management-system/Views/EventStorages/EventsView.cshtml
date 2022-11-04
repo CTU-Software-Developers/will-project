@@ -1,8 +1,33 @@
-﻿@model event_management_system.Models.EventStorage
+﻿﻿@model IEnumerable<event_management_system.Models.EventStorage>
 
 @{
-    ViewBag.Title = "Events View";
+    ViewBag.Title = "EventsView";
 }
 
-<h2>Events View</h2>
-
+@foreach (var item in Model)
+{
+    <div id="image1">
+        <div class="Events">
+            <div class="Sub-events">
+                <button type="button" id="button-image" onclick="location.href='@Url.Action("SportsReviews","Home")'"
+                        style="background-color:grey">
+                    <img src="" />
+                </button>
+                <blockquote id="blockquote-super-sport1">
+                    <center>
+                        <i>SuperSport: Since when is sport so "super"???</i>
+                        <br />
+                        <p>
+                            Since the beginning sport has been the victor in bringing countries together including their
+                            champions and their families making their country proud. These events are not just for country
+                            but some see this is an honor, see it as an opportunity for fund raising and much more than we
+                            can imagine in our life time.
+                            <br />
+                            View related events in detail by using the picture.
+                        </p>
+                    </center>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+}
