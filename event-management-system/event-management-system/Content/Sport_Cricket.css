@@ -46,11 +46,22 @@ h2, h3 {
     position: static;
     float: right;
 }
+.images-Cricket-History1 {
+    position: static;
+    float: left;
+}
 
 .images-Cricket-History {
     background-color: grey;
     padding: 10px 10px 10px 10px;
     border: 1px solid black;
+}
+
+.images-Cricket-History1 {
+    background-color: grey;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid black;
+    width: 225px;
 }
 
 figure {
