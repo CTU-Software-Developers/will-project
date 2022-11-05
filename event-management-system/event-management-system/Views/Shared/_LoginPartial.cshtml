@@ -6,16 +6,6 @@
         using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
         {
             @Html.AntiForgeryToken()
-            @Styles.Render("~/Content/Hoverdrop")
-            <ul class="nav navbar-nav navbar-right">
-                <li id="hover-drop-affect">
-                    @Html.ActionLink("Hello " + User.Identity.Name + "!", "AdminPage", "Home", routeValues: null, htmlAttributes: new { title = "Manage" })
-                    <ul id="appear-with-hover-drop">
-                        <li id="log-off-color" onclick="display_popup_box()"><a href="javascript:void(0)" >Discount / Voucher Code</a></li>
-                        <li id="log-off-color"><a href="javascript:document.getElementById('logoutForm').submit()"> Log Off</a></li>
-                    </ul>
-                </li>
-            </ul>
             <div style="position:relative; display:flex; width: 65px; padding: 10px;">
                 <input type="checkbox" />
                 <button class="hamburger">
@@ -43,13 +33,6 @@
         using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
         {
             @Html.AntiForgeryToken()
-
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-                </li>
-                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-            </ul>
             <div style="position:relative; display:flex; width: 65px; padding: 10px;">
                 <input type="checkbox" />
                 <button class="hamburger">
