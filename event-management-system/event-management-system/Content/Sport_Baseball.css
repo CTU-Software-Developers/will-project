@@ -3,18 +3,15 @@
     padding: 0px 0px 0px 0px;
     font-family: Arial;
     border: 0px;
-    font-size: 14pt;
 }
-
 body {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
+    border: 0px;
     height: auto;
     width: auto;
-    background-color: #eae8e8;
 }
-
-#wrap-content {
+#wrap-Content {
     padding: 0px 30px 0px 30px;
     background-color: #eae8e8;
     border: 1px solid black;
@@ -24,60 +21,49 @@ body {
     overflow-y: hidden;
 }
 
-#wrap-heading-Cricket {
+#wrap-heading-Baseball {
     text-align: center;
     border-bottom: 2px solid black;
 }
 
-#Cricket-heading {
-    font-size: 24pt;
+#Baseball-heading {
     font-weight: 600;
+    font-size: 24pt;
 }
 
-h2, h3 {
+#Baseball-History-Content {
+}
+
+h2,h3 {
     text-decoration: underline;
+    font-weight: 500;
 }
 
 #indent-paragraph {
     margin: 0px 40px 0px 40px;
 }
 
-.images-Cricket-History {
+#baseball-images {
     position: static;
     float: right;
 }
-.images-Cricket-History1 {
+#baseball-images {
+    padding: 10px 10px 10px 10px;
+    background-color: grey;
+    border: 1px solid black;
+}
+#baseball-images1 {
     position: static;
     float: left;
 }
-
-.images-Cricket-History {
-    background-color: grey;
+#baseball-images1 {
     padding: 10px 10px 10px 10px;
-    border: 1px solid black;
-}
-
-.images-Cricket-History1 {
     background-color: grey;
-    padding: 10px 10px 10px 10px;
     border: 1px solid black;
-    width: 225px;
-}
-
-figure {
-    height: fit-content;
-    width: 200px;
-}
-
-img {
-    height: fit-content;
-    width: 200px;
 }
 
 figcaption {
-    position: relative;
     margin: auto auto auto auto;
-    font-size: 12pt;
-    font-style: italic;
+    width: 170px;
     color: white;
 }

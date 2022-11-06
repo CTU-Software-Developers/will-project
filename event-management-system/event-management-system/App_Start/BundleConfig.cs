@@ -51,6 +51,9 @@ namespace event_management_system
             bundles.Add(new StyleBundle("~/Content/Sport_Cricket").Include(
                       "~/Content/Sport_Cricket.css"));
 
+            bundles.Add(new StyleBundle("~/Content/Sport_Baseball").Include(
+                      "~/Content/Sport_Baseball.css"));
+            
         }
     }
 }
