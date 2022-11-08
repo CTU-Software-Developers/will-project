@@ -8,11 +8,6 @@
             @Html.AntiForgeryToken()
             <div style="position:relative; display:flex; width: 65px; padding: 10px;">
                 <input type="checkbox" />
-                <button class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
                 <ul class="drop">
                     <li>
                         @Html.ActionLink("Event Management", "EventsTable", "EventStorages", new { area = "" }, new { @class = "" })
