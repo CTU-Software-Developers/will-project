@@ -6,20 +6,28 @@
         using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
         {
             @Html.AntiForgeryToken()
-            <div style="position:relative; display:flex; width: 65px; padding: 10px;">
-                <input type="checkbox" />
-                <ul class="drop">
-                    <li>
-                        @Html.ActionLink("Event Management", "EventsTable", "EventStorages", new { area = "" }, new { @class = "" })
-                    </li>
-                    <li>
-                        @Html.ActionLink("Code Management", "CodesTable", "CodeStorages", new { area = "" }, new { @class = "" })
-                    </li>
-                    <li>
-                        <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
-                    </li>
-                </ul>
-            </div>
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div style="position:relative; display:flex; width: 65px; padding: 10px;">
+                        <input type="checkbox" />
+                        <button class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <ul class="drop">
+                            <li>
+                                @Html.ActionLink("Event Management", "EventsTable", "EventStorages", new { area = "" }, new { @class = "" })
+                            </li>
+                            <li>
+                                @Html.ActionLink("Code Management", "CodesTable", "CodeStorages", new { area = "" }, new { @class = "" })
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+            </ul>
         }
     }
     else if (!(User.Identity.Name.Equals("Admin")))
