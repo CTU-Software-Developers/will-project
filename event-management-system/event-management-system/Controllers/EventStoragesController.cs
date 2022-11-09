@@ -124,8 +124,20 @@ namespace event_management_system.Controllers
             base.Dispose(disposing);
         }
 
-        // GET: Events
-        public ActionResult EventsView()
+        // GET: EventStorages
+        public ActionResult SportsView()
+        {
+            return View(db.EventStorages.ToList());
+        }
+
+        // GET: EventStorages
+        public ActionResult RacingView()
+        {
+            return View(db.EventStorages.ToList());
+        }
+
+        // GET: EventStorages
+        public ActionResult RageView()
         {
             return View(db.EventStorages.ToList());
         }
