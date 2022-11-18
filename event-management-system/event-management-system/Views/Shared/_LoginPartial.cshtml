@@ -6,7 +6,6 @@
         using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
         {
             @Html.AntiForgeryToken()
-            
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <div style="position:relative; display:flex; width: 65px; padding: 10px;">
@@ -26,8 +25,10 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-            </ul>
+                <li>
+                    <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                </li>
+            </ul>                        
         }
     }
     else if (!(User.Identity.Name.Equals("Admin")))

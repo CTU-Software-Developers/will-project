@@ -38,6 +38,8 @@ namespace event_management_system.Models
         [Required]
         [Display(Name = "Ticket Price")]
         public double TicketPrice { get; set; }
+
+        public string TypeID { get; set; }
     }
     public class EventRevies
     {
@@ -64,5 +66,38 @@ namespace event_management_system.Models
         public DateTime ReviewDate { get; set; }
 
         public EventStorage EventStorage { get; set; }
+    }
+
+    public class SportList
+    {
+        public int EventID { get; set; }
+        public string EventType { get; set; }
+        public string EventName { get; set; }
+        public DateTime EventDate { get; set; }
+        public string EventDescription { get; set; }
+        public DateTime EventTime { get; set; }
+        public double TicketPrice { get; set; }
+    }
+
+    public class RaceList
+    {
+        public int EventID { get; set; }
+        public string EventType { get; set; }
+        public string EventName { get; set; }
+        public DateTime EventDate { get; set; }
+        public string EventDescription { get; set; }
+        public DateTime EventTime { get; set; }
+        public double TicketPrice { get; set; }
+    }
+
+    public class RageList
+    {
+        public int EventID { get; set; }
+        public string EventType { get; set; }
+        public string EventName { get; set; }
+        public DateTime EventDate { get; set; }
+        public string EventDescription { get; set; }
+        public DateTime EventTime { get; set; }
+        public double TicketPrice { get; set; } 
     }
 }
