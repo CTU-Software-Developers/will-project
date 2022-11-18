@@ -7,12 +7,22 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using event_management_system.Models;
+using System.Data.SqlClient;
+using System.Collections;
 
 namespace event_management_system.Controllers
 {
     public class EventStoragesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        string connectionString = "Data Source=.;Initial Catalog=willdatabase;Integrated Security=True";
+        string sql;
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataReader reader;
+        List<SportList> sports = new List<SportList>();
+        List<RaceList> races = new List<RaceList>();
+        List<RageList> rage = new List<RageList>();
 
         // GET: EventStorages
         public ActionResult EventsTable()
@@ -127,19 +137,133 @@ namespace event_management_system.Controllers
         // GET: EventStorages
         public ActionResult SportsView()
         {
-            return View(db.EventStorages.ToList());
+            con = new SqlConnection(connectionString);
+            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice], [TypeID] FROM [willdatabase].[dbo].[EventStorages] where [TypeID] = '1';";
+
+            if (sports.Count > 0)
+            {
+                sports.Clear();
+            }
+            try
+            {
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    sports.Add(new SportList 
+                    {
+                        EventID = Convert.ToInt32(reader["EventID"])
+                        , EventType = reader["EventType"].ToString()
+                        , EventName = reader["EventName"].ToString()
+                        , EventDate = Convert.ToDateTime(reader["EventDate"])
+                        , EventDescription = reader["EventDescription"].ToString()
+                        , EventTime = Convert.ToDateTime(reader["EventTime"])
+                        , TicketPrice = Convert.ToDouble(reader["TicketPrice"])
+                    });
+                }
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+            }
+
+            return View(sports);
         }
 
         // GET: EventStorages
         public ActionResult RacingView()
         {
-            return View(db.EventStorages.ToList());
+            con = new SqlConnection(connectionString);
+            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice], [TypeID] FROM [willdatabase].[dbo].[EventStorages] where [TypeID] = '2';";
+
+            if (races.Count > 0)
+            {
+                races.Clear();
+            }
+            try
+            {
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    races.Add(new RaceList
+                    {
+                        EventID = Convert.ToInt32(reader["EventID"])
+                        ,
+                        EventType = reader["EventType"].ToString()
+                        ,
+                        EventName = reader["EventName"].ToString()
+                        ,
+                        EventDate = Convert.ToDateTime(reader["EventDate"])
+                        ,
+                        EventDescription = reader["EventDescription"].ToString()
+                        ,
+                        EventTime = Convert.ToDateTime(reader["EventTime"])
+                        ,
+                        TicketPrice = Convert.ToDouble(reader["TicketPrice"])
+                    });
+                }
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+            }
+
+            return View(races);
         }
 
         // GET: EventStorages
         public ActionResult RageView()
         {
-            return View(db.EventStorages.ToList());
+            con = new SqlConnection(connectionString);
+            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice], [TypeID] FROM [willdatabase].[dbo].[EventStorages] where [TypeID] = '3';";
+
+            if(rage.Count > 0)
+            {
+                rage.Clear();
+            }
+            try
+            {
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    rage.Add(new RageList
+                    {
+                        EventID = Convert.ToInt32(reader["EventID"])
+                        ,
+                        EventType = reader["EventType"].ToString()
+                        ,
+                        EventName = reader["EventName"].ToString()
+                        ,
+                        EventDate = Convert.ToDateTime(reader["EventDate"])
+                        ,
+                        EventDescription = reader["EventDescription"].ToString()
+                        ,
+                        EventTime = Convert.ToDateTime(reader["EventTime"])
+                        ,
+                        TicketPrice = Convert.ToDouble(reader["TicketPrice"])
+                    });
+                }
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+            }
+
+            return View(rage);
         }
     }
 }

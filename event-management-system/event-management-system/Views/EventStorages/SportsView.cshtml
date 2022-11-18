@@ -1,12 +1,11 @@
-﻿@model IEnumerable<event_management_system.Models.EventStorage>
+﻿@{ 
+    if(Model != null)
+    {
+        foreach(var Data in Model)
+        {  
+            <div>
 
-@{
-    ViewBag.Title = "SportsView";
-}
-
-<h2>Sports Events</h2>
-
-@foreach (var item in Model)
-{
-
+            </div>
+        }
+    }
 }
