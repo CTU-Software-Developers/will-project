@@ -34,6 +34,10 @@ namespace event_management_system.Controllers
         {
             return View();
         }
+        public ActionResult Rage()
+        {
+            return View();
+        }
         public ActionResult Softball()
         {
             return View();
