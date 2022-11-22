@@ -28,7 +28,7 @@
                 <li>
                     <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
                 </li>
-            </ul>                        
+            </ul>
         }
     }
     else if (!(User.Identity.Name.Equals("Admin")))
@@ -46,13 +46,28 @@
                 </button>
                 <ul class="drop">
                     <li>
-                        Discount / Voucher Codes
+                        <a href="javascript:void(0)" onclick="access_popup()">Discount / Voucher Codes</a>
                     </li>
                     <li>
                         <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
                     </li>
                 </ul>
             </div>
+            <div id="window-area">
+                <div id="wrap-popup-window-area" style="display:none;">
+                    <form action="#" id="form-input">
+                        <div id="button-block">
+                            <a id="close-poped-up-box" href="javascript:void(0)" onclick="hide_popup_box()">&times;</a>
+                        </div>
+                        <div id="form-incline-element">
+                            <label id="code-text-label" style="max-width: 200px">Enter Code</label><br/>
+                            <input type="text" id="textdata" placeholder="Enter code here..." autocomplete="off" /><br/>
+                            <input type="submit" id="submit-input" value="Ok" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            @Scripts.Render("~/bundles/user_code_popup")
         }
     }
 }
