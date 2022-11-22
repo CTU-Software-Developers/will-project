@@ -74,5 +74,25 @@ namespace event_management_system.Controllers
         {
             return View();
         }
+        public ActionResult Prize()
+        {
+            return View();
+        }
+        public ActionResult Costume()
+        {
+            return View();
+        }
+        public ActionResult Tech()
+        {
+            return View();
+        }
+        public ActionResult Games()
+        {
+            return View();
+        }
+        public ActionResult Lan()
+        {
+            return View();
+        }
     }
 }
