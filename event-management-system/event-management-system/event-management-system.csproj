@@ -393,6 +393,11 @@
     <Content Include="Views\EventStorages\SportsView.cshtml" />
     <Content Include="Views\EventStorages\RageView.cshtml" />
     <Content Include="Views\Home\Rage.cshtml" />
+    <Content Include="Views\Home\Prize.cshtml" />
+    <Content Include="Views\Home\Costume.cshtml" />
+    <Content Include="Views\Home\Lan.cshtml" />
+    <Content Include="Views\Home\Tech.cshtml" />
+    <Content Include="Views\Home\Games.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
