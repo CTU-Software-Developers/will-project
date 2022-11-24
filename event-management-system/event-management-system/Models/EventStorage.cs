@@ -16,7 +16,7 @@ namespace event_management_system.Models
 
         [Required]
         [Display(Name = "Type")]
-        public string EventType { get; set; }
+        public Event EventType { get; set; }
 
         [Required]
         [Display(Name = "Name")]
@@ -38,9 +38,23 @@ namespace event_management_system.Models
         [Required]
         [Display(Name = "Ticket Price")]
         public double TicketPrice { get; set; }
-
-        public string TypeID { get; set; }
     }
+
+    public enum Event
+    {
+        Baseball,
+        Basketball,
+        Cricket,
+        Hockey,
+        Racing,
+        Netball,
+        Rage,
+        Rugby,
+        Soccer,
+        Softball,
+        Tennis
+    }
+
     public class EventRevies
     {
         [Required]
