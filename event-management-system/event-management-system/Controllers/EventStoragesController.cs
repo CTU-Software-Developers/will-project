@@ -56,7 +56,7 @@ namespace event_management_system.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventID,EventType,EventName,EventDate,EventDescription,EventTime")] EventStorage eventStorage)
+        public ActionResult Create([Bind(Include = "EventID,EventType,EventName,EventDate,EventDescription,EventTime,TicketPrice")] EventStorage eventStorage)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace event_management_system.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventID,EventType,EventName,EventDate,EventDescription,EventTime")] EventStorage eventStorage)
+        public ActionResult Edit([Bind(Include = "EventID,EventType,EventName,EventDate,EventDescription,EventTime,TicketPrice")] EventStorage eventStorage)
         {
             if (ModelState.IsValid)
             {
@@ -138,7 +138,7 @@ namespace event_management_system.Controllers
         public ActionResult SportsView()
         {
             con = new SqlConnection(connectionString);
-            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice], [TypeID] FROM [willdatabase].[dbo].[EventStorages] where [TypeID] = '1';";
+            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice] FROM [willdatabase].[dbo].[EventStorages] where [EventType] != 'Rage' or [EventType] != 'Racing';";
 
             if (sports.Count > 0)
             {
@@ -178,8 +178,7 @@ namespace event_management_system.Controllers
         public ActionResult RacingView()
         {
             con = new SqlConnection(connectionString);
-            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice], [TypeID] FROM [willdatabase].[dbo].[EventStorages] where [TypeID] = '2';";
-
+            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice] FROM [willdatabase].[dbo].[EventStorages] where [EventType] = 'Racing';";
             if (races.Count > 0)
             {
                 races.Clear();
@@ -224,9 +223,8 @@ namespace event_management_system.Controllers
         public ActionResult RageView()
         {
             con = new SqlConnection(connectionString);
-            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice], [TypeID] FROM [willdatabase].[dbo].[EventStorages] where [TypeID] = '3';";
-
-            if(rage.Count > 0)
+            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice] FROM [willdatabase].[dbo].[EventStorages] where [EventType] = 'Rage';";
+            if (rage.Count > 0)
             {
                 rage.Clear();
             }
