@@ -33,6 +33,8 @@ namespace event_management_system.Models
         public string EventDescription { get; set; }
 
         [Display(Name = "Time")]
+        [DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0:HH:mm tt}", ApplyFormatInEditMode = true)]
         public DateTime EventTime { get; set; }
 
         [Required]

@@ -62,7 +62,7 @@ namespace event_management_system.Controllers
             {
                 db.EventStorages.Add(eventStorage);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("EventsTable");
             }
 
             return View(eventStorage);
@@ -94,7 +94,7 @@ namespace event_management_system.Controllers
             {
                 db.Entry(eventStorage).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("EventsTable");
             }
             return View(eventStorage);
         }
@@ -122,7 +122,7 @@ namespace event_management_system.Controllers
             EventStorage eventStorage = db.EventStorages.Find(id);
             db.EventStorages.Remove(eventStorage);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("EventsTable");
         }
 
         protected override void Dispose(bool disposing)
