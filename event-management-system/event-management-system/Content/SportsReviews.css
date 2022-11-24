@@ -29,34 +29,24 @@ header {
     background-color: lightgray;
 }
 
-#wrap-content {
-    margin: auto auto auto auto;
-}
-
-
-
 #center {
-    text-align: center;
     position: relative;
-    padding: 10px 10px 10px 0px;
     margin: auto auto auto auto;
-    width: 250px; 
+    width: 250px;
 }
-
 
 /*History css*/
 #History-info {
     display: block;
     background-color: lightgray;
     position: relative;
-    text-align: center;
-    font-family: Arial;
+    font-family: Arial; 
 }
 
 #History-info ul li {
     list-style: none;
     border: 2px solid black;
-    margin: 0px 20px 10px 0px;
+    margin: 10px 0px 10px 0px;
     background-color: darkgrey;
     width: 100%;
     text-align: center;
@@ -67,7 +57,7 @@ header {
     border: 2px solid cyan;
     background-color: black;
     width: 100%;
-    margin: 0px 20px 10px 0px;
+    margin: 10px 0px 10px 0px;
 }
 
 #History-info ul li a:hover {
@@ -80,15 +70,4 @@ header {
     color: white;
     font-size: 10pt;
     text-decoration: none;
-}
-
-#Future-events {
-    display: block;
-    background-color: lightgray;
-}
-
-#table-of-events {
-    display: block;
-    position: relative;
-    width: 300px;
 }
