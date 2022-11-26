@@ -58,13 +58,13 @@ namespace event_management_system.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventID,EventType,EventName,EventDate,EventDescription,EventTime")] EventStorage eventStorage)
+        public ActionResult Create([Bind(Include = "EventID,EventType,EventName,EventDate,EventDescription,EventTime,TicketPrice")] EventStorage eventStorage)
         {
             if (ModelState.IsValid)
             {
                 db.EventStorages.Add(eventStorage);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("EventsTable");
             }
 
             return View(eventStorage);
@@ -90,13 +90,13 @@ namespace event_management_system.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventID,EventType,EventName,EventDate,EventDescription,EventTime")] EventStorage eventStorage)
+        public ActionResult Edit([Bind(Include = "EventID,EventType,EventName,EventDate,EventDescription,EventTime,TicketPrice")] EventStorage eventStorage)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(eventStorage).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("EventsTable");
             }
             return View(eventStorage);
         }
@@ -124,7 +124,7 @@ namespace event_management_system.Controllers
             EventStorage eventStorage = db.EventStorages.Find(id);
             db.EventStorages.Remove(eventStorage);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("EventsTable");
         }
 
         protected override void Dispose(bool disposing)

@@ -240,3 +240,6 @@ footer {
 img#actualImage {
     height: 500px;
 }
+.form-horizontal{
+    display:none;
+}

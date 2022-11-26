@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -46,6 +46,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -54,6 +63,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -117,20 +128,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Owin">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -169,6 +171,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Comment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CodeStoragesController.cs" />
     <Compile Include="Controllers\EventReviesController.cs" />
@@ -191,6 +196,21 @@
       <DependentUpon>202210211240539_Complete-Setup.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CodeStorage.cs" />
     <Compile Include="Models\EventStorage.cs" />
@@ -216,6 +236,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\anime2.jpg" />
+    <Content Include="Images\apex.jpg" />
     <Content Include="Images\Baseball_folder\220px-thumbnail.jpg" />
     <Content Include="Images\Baseball_folder\220px-WBC2006_Sadaharu_Oh.jpg" />
     <Content Include="Images\Baseball_folder\220px_Aprettylittlepocketbook.jpg" />
@@ -224,7 +246,16 @@
     <Content Include="Images\Baseball_folder\D7K_4969_Roy_Halladay.jpg" />
     <Content Include="Images\Baseball_folder\JackieRobinson1945.jpg" />
     <Content Include="Images\Baseball_folder\Medieval_baseball_El_juego_de_la_Pelota_in_the_Cantigas_de_Santa_Maria.jpg" />
+    <Content Include="Images\bayonetta3.jpg" />
     <Content Include="Images\car_cover.jpg" />
+    <Content Include="Images\ciri2.jpg" />
+    <Content Include="Images\comp1.jpg" />
+    <Content Include="Images\comp2.jpg" />
+    <Content Include="Images\cop2.jpg" />
+    <Content Include="Images\cosplay1.jpg" />
+    <Content Include="Images\cosplay2.jpg" />
+    <Content Include="Images\cosplay3.jpg" />
+    <Content Include="Images\costume2.jpg" />
     <Content Include="Images\Cricket\200px-Historical_cricket_bat_art.jpg" />
     <Content Include="Images\Cricket\220px-1878AusTeamNiagraFalls.jpg" />
     <Content Include="Images\Cricket\220px-Darnall_cricket_ground.jpg" />
@@ -240,6 +271,11 @@
     <Content Include="Images\Cricket\Cricket_for_women\Cricket_Match_Played_by_the_Countess_of_Derby_and_Other_Ladies,_1779.jpg" />
     <Content Include="Images\Cricket\Cricket_for_women\Lily_Poulett-Harris_%281873-1897%29.jpg" />
     <Content Include="Images\Cricket\First_Grand_Match_of_Cricket_Played_by_Members_of_the_Royal_Amateur_Society_on_Hampton_Court_Green,_..._-_Google_Art_Project.jpg" />
+    <Content Include="Images\fifa.jpg" />
+    <Content Include="Images\fortnite.jpg" />
+    <Content Include="Images\god of war.jpg" />
+    <Content Include="Images\harley2.jpg" />
+    <Content Include="Images\hero2.jpg" />
     <Content Include="Images\Hockey\200px-21_CZE-SVK_24.jpg" />
     <Content Include="Images\Hockey\200px-Bully_beim_Inline-Skaterhockey.jpg" />
     <Content Include="Images\Hockey\2010ParalympicsCanadaVsSwedenIceSledgeHockey.jpg" />
@@ -259,7 +295,13 @@
     <Content Include="Images\Hockey\Roller-skate.jpg" />
     <Content Include="Images\Hockey\Roller_skates.jpg" />
     <Content Include="Images\Hockey\Sled_hockey_player.jpg" />
+    <Content Include="Images\hogwarts.jpg" />
+    <Content Include="Images\mk2.jpg" />
+    <Content Include="Images\rage text.jpg" />
     <Content Include="Images\rAge.jpg" />
+    <Content Include="Images\rage2.png" />
+    <Content Include="Images\rageRobo.png" />
+    <Content Include="Images\roadhog2.jpg" />
     <Content Include="Images\SoftballSport\170px-Counter_for_softball_and_baseball.jpg" />
     <Content Include="Images\SoftballSport\170px-SlowpitchTarget.jpg" />
     <Content Include="Images\SoftballSport\170px-Softball_batter_1560583.jpg" />
@@ -278,6 +320,7 @@
     <Content Include="Images\SoftballSport\UT_softball_2007.jpg" />
     <Content Include="Images\SoftballSport\Yellow_softball.jpg" />
     <Content Include="Images\SPORT_front.jpg" />
+    <Content Include="Images\starfield.jpg" />
     <Content Include="Images\Tennis\103px-Helen_Wills_Moody_1932.jpg" />
     <Content Include="Images\Tennis\112px-Steffi_Graf_in_Hamburg.jpg" />
     <Content Include="Images\Tennis\140px-Nadal_vs_Federer_RG_2007.jpg" />
@@ -312,12 +355,29 @@
     <Content Include="Images\Tennis\Tennis.JPG" />
     <Content Include="Images\Tennis\Tennis_Racket_and_Balls.jpg" />
     <Content Include="Images\Tennis\Tennis_shake_hands_after_match.jpg" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\Hoverdrop.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -330,6 +390,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\User_code_popup_window.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -395,6 +456,16 @@
     <Content Include="Views\EventStorages\SportsView.cshtml" />
     <Content Include="Views\EventStorages\RageView.cshtml" />
     <Content Include="Views\Home\Rage.cshtml" />
+    <Content Include="Views\Home\Prize.cshtml" />
+    <Content Include="Views\Home\Costume.cshtml" />
+    <Content Include="Views\Home\Lan.cshtml" />
+    <Content Include="Views\Home\Tech.cshtml" />
+    <Content Include="Views\Home\Games.cshtml" />
+    <Content Include="Views\Home\ReviewComments.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -418,6 +489,9 @@
     <EmbeddedResource Include="Migrations\202210211240539_Complete-Setup.resx">
       <DependentUpon>202210211240539_Complete-Setup.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -451,9 +525,9 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

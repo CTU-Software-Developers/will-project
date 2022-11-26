@@ -46,3 +46,56 @@ input[type="checkbox"]:checked ~ .drop {
     height: auto;
     text-align: center;
 }
+
+#window-area {
+    position: absolute;
+    margin: auto auto auto auto;
+    text-align:center;
+}
+
+#wrap-popup-window-area {
+    display:block;
+    position: absolute;
+    margin: 260px 600px auto -620px;
+    border: 1px solid black;
+    width: 300px;
+    background-color: lightgray;
+    z-index: 4;
+}
+
+#form-input {
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    height: 100px;
+}
+
+#button-block {
+    position:absolute;
+    right: 40px;
+    height: auto;
+}
+#button-block a {
+    text-decoration: none;
+    color:black;
+}
+
+#form-incline-element {
+    margin: auto auto auto auto;
+    padding: 0px 0px 0px 0px;
+    height: 70px;
+    width: inherit;
+}
+
+#code-text-label {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    max-width: 200px;
+    left: 80px;
+}
+
+#submit-input {
+    position: absolute;
+    
+    right: 76px;
+    height: auto;
+}

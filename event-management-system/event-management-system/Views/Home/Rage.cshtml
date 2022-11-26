@@ -1,1 +1,79 @@
-﻿
+﻿<!DocType html>
+<html>
+<head>
+    <title></title>
+    @Styles.Render("~/Content/rageStyle")
+</head>
+
+<body style="background-image: url('/BuildingSceneVector.jpg')">
+
+
+    <div class="jumbotron">
+        <center><h1>Rage Expo</h1></center>
+
+        <center><img src="~/Images/rage2.png" alt="ragesec" style="height:500px;width:700px"></center>
+    </div>
+
+    <br />
+    <center><h2>Details</h2></center>
+    <p>
+        WELCOME ONE AND ALL to the <b>rAge</b> expo website, South Africa's award winning event
+        for gaming, Esports, Geek Culture. This is a very special occasion because we are
+        celebrating 20 years of Awsomness where we will be featuring 100 or MORE specialised and
+        diverse roster of exhibitors displaying everything from gaming clothing to state-of-the-art
+        Virtual Reality Headsets. We welcome all types of people from culture fanatics to first time
+        Geeks we offer everything for all tastes. So what are you waiting for book a ticket and stop on by!!!!!!
+    </p>
+
+    <center><h2>WhAt To ExpEct</h2></center>
+    <center><b>All your gaming interests are belong to us!</b></center>
+    <p>Here is a list of what to expect at the event:</p>
+
+    <ul>
+        <li>Virtual Reality</li>
+        <li>@Html.ActionLink("Esports, Comps and Prizes", "Prize", "Home")</li>
+        <li>@Html.ActionLink("Cosplay", "Costume", "Home")</li>
+        <li>Comic books & Graphic Novels</li>
+        <li>Robotics</li>
+        <li>Workshop and Bootcamps</li>
+        <li>Card Games, Board Games and Figurines</li>
+        <li>@Html.ActionLink("Technology and Business", "Tech", "Home")</li>
+        <li>@Html.ActionLink("Video Games", "Games", "Home")</li>
+        <li>@Html.ActionLink("BYOC LAN", "Lan", "Home")</li>
+    </ul>
+
+    <p>
+        With our fine expo rAge has welcomed over 450 000 visitors, featured over 1350 exhibitors
+        on 244 000+ of open space and 260 000 beverages. We help grow communties, we LOVE gaming and
+        and are more experinced than anyone combined. We hope to see you here!
+        <b>Press F to pay respects to those who can't come.</b>
+    </p>
+    <br />
+
+    <center><h1>Tutorial Info</h1></center>
+
+    <ul>
+        <li>Age Requirment:  All Ages(kids under 6 ENTER free)</li>
+        <li>Opening Dates:   9-11 December 2022</li>
+        <li>Opening Times:   10:00 - 18:00 All 3 days</li>
+        <li>Ticket Phase:    From 21st October to Opening Day</li>
+        <li>Cost:            R175 per person for Day Pass, R390 for Weekend Pass</li>
+        <li>
+            Venue:           Gallagher Convention Center, Midrand, Gauteng|
+            9 Richards Dr, Halfway House, Midrand, 1685| GPS: 26.0017° S, 28.1297° E
+    </ul>
+    <br />
+
+    <fieldset>
+
+        <iframe src="https://www.google.com/maps/place/Gallagher+Convention+Centre/-26.0016619,28.1271473,17z/data=!3m1!4b1!4m5!3m4!1s0x1e956e09d35c626b:0x6ff5cc181341a2b!8m2!3d-26.0016667!4d28.1297222" width="1300" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </fieldset>
+
+    <form id="form1" runat="server">
+        <div id="map_canvas" style="width: 100%; height: 400px"></div>
+    </form>
+
+</body>
+
+</html>

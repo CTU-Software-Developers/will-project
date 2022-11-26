@@ -40,9 +40,8 @@ namespace event_management_system.Models
         [Required]
         [Display(Name = "Ticket Price")]
         public double TicketPrice { get; set; }
-
     }
-
+    
     public enum EventList
     {
         Baseball,
@@ -57,6 +56,7 @@ namespace event_management_system.Models
         Softball,
         Tennis
     }
+
     public class EventRevies
     {
         [Required]
