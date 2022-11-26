@@ -9,6 +9,8 @@ using System.Web.Mvc;
 using event_management_system.Models;
 using System.Data.SqlClient;
 using System.Collections;
+using System.Windows;
+using static event_management_system.Models.EventStorage;
 
 namespace event_management_system.Controllers
 {
@@ -138,7 +140,7 @@ namespace event_management_system.Controllers
         public ActionResult SportsView()
         {
             con = new SqlConnection(connectionString);
-            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice], [TypeID] FROM [willdatabase].[dbo].[EventStorages] where [TypeID] = '1';";
+            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice] FROM [willdatabase].[dbo].[EventStorages] where [EventType] != 4 or [EventType] != 6;";
 
             if (sports.Count > 0)
             {
@@ -155,11 +157,11 @@ namespace event_management_system.Controllers
                     sports.Add(new SportList 
                     {
                         EventID = Convert.ToInt32(reader["EventID"])
-                        , EventType = reader["EventType"].ToString()
+                        , EventType = Convert.ToInt32(reader["EventType"])
                         , EventName = reader["EventName"].ToString()
-                        , EventDate = Convert.ToDateTime(reader["EventDate"])
+                        , EventDate = (Convert.ToDateTime(reader["EventDate"])).ToString("dd-MM-yyyy")
                         , EventDescription = reader["EventDescription"].ToString()
-                        , EventTime = Convert.ToDateTime(reader["EventTime"])
+                        , EventTime = (Convert.ToDateTime(reader["EventTime"])).ToString("hh:mm tt")
                         , TicketPrice = Convert.ToDouble(reader["TicketPrice"])
                     });
                 }
@@ -169,6 +171,7 @@ namespace event_management_system.Controllers
             catch (Exception ex)
             {
                 string message = ex.Message;
+                MessageBox.Show(ex.ToString());
             }
 
             return View(sports);
@@ -178,8 +181,7 @@ namespace event_management_system.Controllers
         public ActionResult RacingView()
         {
             con = new SqlConnection(connectionString);
-            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice], [TypeID] FROM [willdatabase].[dbo].[EventStorages] where [TypeID] = '2';";
-
+            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice] FROM [willdatabase].[dbo].[EventStorages] where [EventType] = 4;";
             if (races.Count > 0)
             {
                 races.Clear();
@@ -196,15 +198,15 @@ namespace event_management_system.Controllers
                     {
                         EventID = Convert.ToInt32(reader["EventID"])
                         ,
-                        EventType = reader["EventType"].ToString()
+                        EventType = Convert.ToInt32(reader["EventType"])
                         ,
                         EventName = reader["EventName"].ToString()
                         ,
-                        EventDate = Convert.ToDateTime(reader["EventDate"])
+                        EventDate = (Convert.ToDateTime(reader["EventDate"])).ToString("dd-MM-yyyy")
                         ,
                         EventDescription = reader["EventDescription"].ToString()
                         ,
-                        EventTime = Convert.ToDateTime(reader["EventTime"])
+                        EventTime = (Convert.ToDateTime(reader["EventTime"])).ToString("hh:mm tt")
                         ,
                         TicketPrice = Convert.ToDouble(reader["TicketPrice"])
                     });
@@ -224,9 +226,8 @@ namespace event_management_system.Controllers
         public ActionResult RageView()
         {
             con = new SqlConnection(connectionString);
-            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice], [TypeID] FROM [willdatabase].[dbo].[EventStorages] where [TypeID] = '3';";
-
-            if(rage.Count > 0)
+            sql = "SELECT TOP (1000) [EventID], [EventType], [EventName], [EventDate], [EventDescription], [EventTime], [TicketPrice] FROM [willdatabase].[dbo].[EventStorages] where [EventType] = 6;";
+            if (rage.Count > 0)
             {
                 rage.Clear();
             }
@@ -242,15 +243,15 @@ namespace event_management_system.Controllers
                     {
                         EventID = Convert.ToInt32(reader["EventID"])
                         ,
-                        EventType = reader["EventType"].ToString()
+                        EventType = Convert.ToInt32(reader["EventType"])
                         ,
                         EventName = reader["EventName"].ToString()
                         ,
-                        EventDate = Convert.ToDateTime(reader["EventDate"])
+                        EventDate = (Convert.ToDateTime(reader["EventDate"])).ToString("dd-MM-yyyy")
                         ,
                         EventDescription = reader["EventDescription"].ToString()
                         ,
-                        EventTime = Convert.ToDateTime(reader["EventTime"])
+                        EventTime = (Convert.ToDateTime(reader["EventTime"])).ToString("hh:mm tt")
                         ,
                         TicketPrice = Convert.ToDouble(reader["TicketPrice"])
                     });
