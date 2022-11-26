@@ -1,13 +1,28 @@
-﻿.event-container{
-
+﻿.event-container {
+    display: flex;
+    margin: 20px 0px 20px 0px;
+    height: auto;
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 10px;
 }
 
-.event-image{
-
+.event-image {
+    padding: 5px 5px 5px 5px;
+    height: fit-content;
+    border-radius: 10px;
+    position: relative;
+    width: fit-content;
 }
 
-.event-info{
-
+.event-info {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+    vertical-align: central;
+    border-inline-color: green;
+    width: 100%;
+    height: fit-content;
 }
 
 .event-header{
@@ -18,18 +33,24 @@
 
 }
 
-.event-date{
-
+.date-time{
+    padding-right: 5px;
+    padding-bottom: 2px;
+    display: inline-flex;
 }
 
-.event-times{
-
+.btns{
+    text-align: right;
+    padding-bottom: 5px;
+    padding-right: 5px;
 }
 
-.event-review{
-
-}
-
-.event-price{
+.event-btns {
+    display: inline-block;
+    color: black;
+    background-color: lightcyan;
+    padding: 2px;
+    right: 2px;
+    text-decoration: none;
 
 }

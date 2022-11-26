@@ -20,18 +20,18 @@
                     <p class="event-description">
                         @Data.EventDescription
                     </p>
-                    <p class="event-date">
+                    <p class="date-time">
                         @Data.EventDate
-                    </p>
-                    <p class="event-time">
                         @Data.EventTime
                     </p>
-                    <button class="event-review">
-                        @Html.ActionLink("Reviews", "Index", "EventRevies", new { id = Data.EventID })
-                    </button>
-                    <button class="event-price">
-                        Price: R @Data.TicketPrice
-                    </button>
+                    <div class="btns">
+                        <button class="event-btns">
+                            @Html.ActionLink("Reviews", "Index", "EventRevies", new { id = Data.EventID })
+                        </button>
+                        <button class="event-btns">
+                            Price: R @Data.TicketPrice
+                        </button>
+                    </div>
                 </div>
             </div>
         }
