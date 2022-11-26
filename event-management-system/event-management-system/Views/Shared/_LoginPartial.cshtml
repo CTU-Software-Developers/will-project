@@ -60,14 +60,44 @@
                             <a id="close-poped-up-box" href="javascript:void(0)" onclick="hide_popup_box()">&times;</a>
                         </div>
                         <div id="form-incline-element">
-                            <label id="code-text-label" style="max-width: 200px">Enter Code</label><br/>
-                            <input type="text" id="textdata" placeholder="Enter code here..." autocomplete="off" /><br/>
+                            <label id="code-text-label" style="max-width: 200px">Enter Code</label><br />
+                            <input type="text" id="textdata" placeholder="Enter code here..." autocomplete="off" /><br />
                             <input type="submit" id="submit-input" value="Ok" />
                         </div>
                     </form>
                 </div>
             </div>
             @Scripts.Render("~/bundles/user_code_popup")
+        }
+    }
+    else if (User.Identity.Name.Equals("Admins"))
+    {
+        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+        {
+            @Html.AntiForgeryToken()
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div style="position:relative; display:flex; width: 65px; padding: 10px;">
+                        <input type="checkbox" />
+                        <button class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <ul class="drop">
+                            <li>
+                                @Html.ActionLink("Event Management", "EventsTable", "EventStorages", new { area = "" }, new { @class = "" })
+                            </li>
+                            <li>
+                                @Html.ActionLink("Code Management", "CodesTable", "CodeStorages", new { area = "" }, new { @class = "" })
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                </li>
+            </ul>
         }
     }
 }

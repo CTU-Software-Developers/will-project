@@ -241,5 +241,5 @@ img#actualImage {
     height: 500px;
 }
 .form-horizontal{
-    display:none;
+    display:block;
 }
