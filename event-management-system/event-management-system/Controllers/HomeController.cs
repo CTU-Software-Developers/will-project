@@ -162,5 +162,9 @@ namespace event_management_system.Controllers
         }
 
         //Review Page with commenting section end
+        public ActionResult Facts()
+        {
+            return View();
+        }
     }
 }
