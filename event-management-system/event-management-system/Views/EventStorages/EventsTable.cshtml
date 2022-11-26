@@ -23,9 +23,6 @@
         <th>
             @Html.DisplayNameFor(model => model.EventDescription)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EventTime)
-        </th>
         <th></th>
     </tr>
 
@@ -42,9 +39,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.EventDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventTime)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EventID }) |
