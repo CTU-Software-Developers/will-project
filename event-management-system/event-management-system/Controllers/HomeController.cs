@@ -8,6 +8,7 @@ namespace event_management_system.Controllers
 {
     public class HomeController : Controller
     {
+        willdatabaseContext _context = new willdatabaseContext();
         public ActionResult Index()
         {
             return View();
@@ -94,5 +95,72 @@ namespace event_management_system.Controllers
         {
             return View();
         }
+
+
+        //Review Page with commenting section start
+        public ActionResult ReviewComments()
+        {
+            var listofData = _context.Comments.ToList();
+            return View(listofData);
+        }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        public dynamic GetViewBag()
+        {
+            return ViewBag;
+        }
+
+        [HttpPost]
+        public ActionResult Create(Comment model, dynamic viewBag)
+        {
+            _context.Comments.Add(model);
+            _context.SaveChanges();
+            //viewBag.Message = "Comment Inserted Successfully";
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var data = _context.Comments.Where(x => x.userID == id).FirstOrDefault();
+
+            return View(data);
+        }
+        [HttpPost]
+        public ActionResult Edit(Comment Model)
+        {
+            var data = _context.Comments.Where(x =>x.userID == Model.userID).FirstOrDefault();
+            if (data != null)
+            {
+                data.FirstName = Model.FirstName;
+                data.LastName = Model.LastName;
+                data.City = Model.City;
+                data.Question1 = Model.Question1;
+                data.Question2 = Model.Question2;
+                data.Question3 = Model.Question3;
+                _context.SaveChanges();
+            }
+            return RedirectToAction("ReviewComments");
+        }
+        public ActionResult Details(int id)
+        {
+            var data = _context.Comments.Where(x => x.userID == id).FirstOrDefault();
+            return View(data);
+
+        }
+        public ActionResult Delete(int id)
+        {
+            var data = _context.Comments.Where(x => x.userID == id).FirstOrDefault();
+            _context.Comments.Remove(data);
+            _context.SaveChanges();
+            ViewBag.Message("Comment Successfully deleted");
+            return RedirectToAction("ReviewComments");
+
+        }
+
+        //Review Page with commenting section end
     }
 }
