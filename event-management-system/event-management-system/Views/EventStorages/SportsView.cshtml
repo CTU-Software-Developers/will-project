@@ -1,10 +1,38 @@
-﻿@{ 
-    if(Model != null)
-    {
-        foreach(var Data in Model)
-        {  
-            <div>
+﻿@model IEnumerable<event_management_system.Models.SportList>
 
+@{
+    ViewBag.Title = "Sport Events";
+}
+
+@{
+    if (Model != null)
+    {
+        foreach (var Data in Model)
+        {
+            <div class="event-container">
+                <div class="event-image">
+
+                </div>
+                <div class="event-info">
+                    <h3 class="event-header">
+                        @Data.EventName
+                    </h3>
+                    <p class="event-description">
+                        @Data.EventDescription
+                    </p>
+                    <p class="event-date">
+                        @Data.EventDate
+                    </p>
+                    <p class="event-time">
+                        @Data.EventTime
+                    </p>
+                    <button class="event-review">
+                        @Html.ActionLink("Reviews", "Index", "EventRevies", new { id = Data.EventID })
+                    </button>
+                    <button class="event-price">
+                        @Data.TicketPrice
+                    </button>
+                </div>
             </div>
         }
     }

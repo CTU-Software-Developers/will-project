@@ -16,7 +16,7 @@ namespace event_management_system.Models
 
         [Required]
         [Display(Name = "Type")]
-        public Event EventType { get; set; }
+        public EventList EventType { get; set; }
 
         [Required]
         [Display(Name = "Name")]
@@ -34,15 +34,15 @@ namespace event_management_system.Models
 
         [Display(Name = "Time")]
         [DataType(DataType.Time)]
-        [DisplayFormat(DataFormatString = "{0:HH:mm tt}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "0:hh:mm tt", ApplyFormatInEditMode = true)]
         public DateTime EventTime { get; set; }
 
         [Required]
         [Display(Name = "Ticket Price")]
         public double TicketPrice { get; set; }
     }
-
-    public enum Event
+    
+    public enum EventList
     {
         Baseball,
         Basketball,
@@ -87,33 +87,33 @@ namespace event_management_system.Models
     public class SportList
     {
         public int EventID { get; set; }
-        public string EventType { get; set; }
+        public int EventType { get; set; }
         public string EventName { get; set; }
-        public DateTime EventDate { get; set; }
+        public string EventDate { get; set; }
         public string EventDescription { get; set; }
-        public DateTime EventTime { get; set; }
+        public string EventTime { get; set; }
         public double TicketPrice { get; set; }
     }
 
     public class RaceList
     {
         public int EventID { get; set; }
-        public string EventType { get; set; }
+        public int EventType { get; set; }
         public string EventName { get; set; }
-        public DateTime EventDate { get; set; }
+        public string EventDate { get; set; }
         public string EventDescription { get; set; }
-        public DateTime EventTime { get; set; }
+        public string EventTime { get; set; }
         public double TicketPrice { get; set; }
     }
 
     public class RageList
     {
         public int EventID { get; set; }
-        public string EventType { get; set; }
+        public int EventType { get; set; }
         public string EventName { get; set; }
-        public DateTime EventDate { get; set; }
+        public string EventDate { get; set; }
         public string EventDescription { get; set; }
-        public DateTime EventTime { get; set; }
-        public double TicketPrice { get; set; } 
+        public string EventTime { get; set; }
+        public double TicketPrice { get; set; }
     }
 }
