@@ -1,4 +1,4 @@
-﻿@model IEnumerable<event_management_system.Models.RageList>
+﻿@model IEnumerable<event_management_system.Models.SportList>
 
 @{
     ViewBag.Title = "Sport Events";
@@ -20,16 +20,16 @@
                     <p class="event-description">
                         @Data.EventDescription
                     </p>
-                    <p class="event-date">
+                    <p class="date-time">
                         @Data.EventDate
                     </p>
-                    <p class="event-time">
+                    <p class="date-time">
                         @Data.EventTime
                     </p>
-                    <button class="event-review">
+                    <button class="event-btns">
                         @Html.ActionLink("Reviews", "Index", "EventRevies", new { id = Data.EventID })
                     </button>
-                    <button class="event-price">
+                    <button class="event-btns">
                         Price: R @Data.TicketPrice
                     </button>
                 </div>
