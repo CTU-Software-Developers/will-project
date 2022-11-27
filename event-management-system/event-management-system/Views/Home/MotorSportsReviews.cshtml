@@ -1,4 +1,88 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@{
+    ViewBag.Title = "Racing";
+}
 <h1>Motor Sports Review page</h1>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=opera" />
+    <meta http-equiv="X-UA-Compatible" content="IE=brave" />
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome" />
+    <meta http-equiv="X-UA-Compatible" content="IE=moz" />
+</head>
+
+<div class="body">
+    <center>
+        <h1><u>Racing events</u></h1>
+        <div class="vl"></div>
+        <h2 text-align :left;>History of the <br /> racing events</h2>
+        <hr class="horizontal-line" />
+        <br />
+        <button type="button" class="button button" onclick="location.href ='@Url.Action("Formula1History","Home")'">History of Formula 1</button>
+        <br />
+        <button type="button" class="button button" onclick="location.href ='@Url.Action("WorldEndurance","Home")'">History of World Endurance Championship</button>
+        <br />
+        <button type="button" class="button button" onclick="location.href ='@Url.Action("Driftmasters","Home")'">History of Drift Masters</button>
+        <br />
+        <button type="button" class="button button" onclick="location.href ='@Url.Action("DragRacing","Home")'">History of Drag Racing</button>
+        <br />
+        <button type="button" class="button button" onclick="location.href ='@Url.Action("StockCarRacing","Home")'">History of Stock Car Racing</button>
+    </center>
+</div>
+<style>
+
+    .vl {
+        height: 300px;
+        position: absolute;
+        left: 40%;
+        margin-left: 0px;
+        top: 20%;
+        padding: 50px 15px;
+    }
+
+    .button:hover {
+        background-color: black;
+        color: white;
+        border-color: red;
+    }
+
+    .button {
+        background-color: #A9A9A9;
+        color: white;
+        padding: 5px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width: 250px;
+    }
+
+    table, th, td {
+        border: solid 1px #bbbbbb;
+        border-collapse: collapse;
+        padding: 1px;
+    }
+
+    .body {
+        background-color: lightgray;
+        padding: 0px 0px 80px 0px;
+    }
+
+    h2 {
+        margin-left: 0%;
+    }
+
+    .horizontal-line {
+        width: 22%;
+        height: 2px;
+        background-color: black;
+        margin-left: 0%;
+        margin-bottom: -1.2%;
+    }
+</style>

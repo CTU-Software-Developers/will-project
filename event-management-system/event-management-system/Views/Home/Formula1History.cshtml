@@ -1,0 +1,100 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Formula1History";
+}
+<head>
+    <link rel="Stylesheet" href="~/Content/Formula1History.css" type="text/css" />
+    @Styles.Render("~/Content/Formula1History.css");
+</head>
+
+<div class="body">
+    <div id="myDiv">
+        <div id="mypre">
+            <h2><b>What is Formula 1</b></h2>
+            <p class="text">
+                Formula One (F1) is a series of races held at different venues around the world,of the fastest open-wheel,open-cabin,single-seated,
+                four-wheeled autos in the world.
+            </p>
+            <div class="formula-2">
+                <figure class="figcaption">
+                    <a target="_blank" href="~/Images/Photos/2 f1 cars.jpg" class="imgclick">
+                        <img src="~/Photos/2 f1 cars.jpg" alt="Formula 1 car" class="f1h" style="width: 500px; height:250px;" />
+                    </a>
+                </figure>
+
+            </div>
+            <p class="text">
+                There have been a few years when even six-wheeled cars participated in F1.The word ‘Formula’,included in the name, refers to a set of rules that
+                the constructors of the car, its mechanics and the drivers have to strictly follow during the tenure that they are members of F1.
+                When motor racing first began,there were no limitations on the power or the size of the cars. The races became unequal with cars with more power and
+                bigger sizes easily outpacing the smaller cars. The races also created dangerous situations in which many participants got seriously hurt, some even
+                fatally. When racing resumed after World War II, the governing body of the sport, the FIA, introduced a set of rules that set limits on the size and
+                the power of the cars. This created an even playing field for the participants and drivers, while more stress was laid on the efficiency and design
+                of the cars and also the capability of the drivers. The word ‘One’ comes from the grading FIA issues to the racing tracks, the approved cars and the
+                drivers’ licences. The ‘One’ is also to distinguish F1 from street car racing and also to indicate that it is the ultimate in formula racing.
+                Formula One is governed by the Federation Internationale de l’Automobile (FIA) owned by the Formula One Group. The FIA, established on 20 June 1904,
+                is a non-profit organisation and represents the interest of motoring organisations and motor car users. The organisation amends, alters and introduces
+                rules to Formula One so as to ensure the safety of the participants in the races, promote fair play, and ensure that the followers and spectators of
+                Formula One get a good deal.
+            </p>
+            <div class="formula-2">
+                <figure class="figcaption">
+                    <a target="_blank" href="~/Images/Photos/Formula.jpg" class="imgclick">
+                        <img src="~/Photos/Formula.jpg" alt="Formula 1" class="f1h" style="width: 500px; height:250px;" />
+                    </a>
+                </figure>
+            </div>
+
+            <h2><b>History of Formula 1</b></h2>
+            <p class="text">
+                Formula One originated with the European Championship of Grand Prix races. Though the ‘formula’ or a set of rules was agreed to by several Grand Prix
+                organisations before World War II, races were suspended during the war. Formula One, a new set of rules, were agreed upon by the racing organisations
+                in 1946. The first non-championship race was the Turin Grand Prix held the same year in Italy. The following year the World Drivers’ Championship was
+                formalised. Achille Varzi, an Italian driver, won the race in an Alfa Romeo. The first world championship race was held in 1950 at Silverstone in the
+                United Kingdom. Guiseppe Farina, an Italian driver in his Alfa Romeo, was the first driver to win the World Drivers’ Championship that year.Juan Manuel
+                Fangio, an Argentinian driver and Farina’s teammate, narrowly missed the championship title in 1950. But Fangio came back strongly to win 1951,
+                ‘54, ‘55, ‘56 and ‘57 championship titles.His record of 5 championship titles was surpassed 45 years laterwhen Michael Schumacher won his sixth World Driver’s
+                Championship in 2003.The Constructors Championship was introduced in 1958. Then called the International Cup for F1 Manufacturers,the first cup in 1958 was
+                won by Vanwall. According to FIA, the Constructors Championship, “the constructor of an engine or chassis is the person (including any corporate or
+                unincorporated body) which owns the intellectual rights to such engine or chassis.” That is the reason teams have had names such as McLaren-Renault in the past.
+                It meant that while the chassis of the F1 car was built by McLaren, the engine was supplied by Renault. Both parties worked together to build a car suited to the
+                tracks and their drivers. Over the years there have been only five countries that have shared the Constructors’ Championship between them.The countries are the UK
+                leading with 33 championships, Italy (16), Germany (8), Austria (4) and France (3). Ferrari of Italy with 16 championships is the top constructor to date.
+                Formula One went through many changes in its rules.
+            </p>
+            <div class="formula-2">
+                <figure class="figcaption">
+                    <a target="_blank" href="~/Images/Photos/ferrari history.jpg" class="imgclick">
+                        <img src="~/Photos/ferrari history.jpg" alt="Ferrari" class="f1h" style="width: 500px; height:250px;" />
+                    </a>
+                </figure>
+            </div>
+            <p class="text">
+                Most of the changes were aimed at minimising risk to the cars and drivers and increasing the spectator appeal of the sport. There were changes in engine sizes,
+                car width and lengths, fuel tank sizes and the sizes of the tyres. Those rules do not concern us. Suffice it to say that spectators are better off for the changes,
+                the sport is more competitive and the participants are safer. We will go on to take a look at the cars which we are sure you are most interested in.
+            </p>
+            <h2>
+                <b>Objective</b>
+            </h2>
+            <p class="text">
+                The objective of a Formula 1 contest is to determine the winner of a race. The driver who crosses the finish line first after completing a pre-determined number of
+                laps is declared the winner.
+            </p>
+            <div class="formula-2">
+                <figure class="figcaption">
+                    <a target="_blank" href="~/Images/Photos/Finish Line Formula 1.jpg" class="imgclick">
+                        <img src="~/Photos/Finish Line Formula 1.jpg" alt="Finish Line" class="f1h" style="width: 500px; height:250px;" />
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <button type="button" class="button button" onclick="location.href ='@Url.Action("Index","Home")'">Back</button>
+    </div>
+</div>
+
+
+

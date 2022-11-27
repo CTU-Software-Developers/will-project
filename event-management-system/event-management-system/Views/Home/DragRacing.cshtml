@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=opera" />
+    <meta http-equiv="X-UA-Compatible" content="IE=brave" />
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome" />
+    <meta http-equiv="X-UA-Compatible" content="IE=moz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag Racing</title>
+    <link rel="stylesheet" href="~/Content/DragRacing.css" type="text/css" />
+    @Styles.Render("~/Content/DragRacing.css")
+</head>
+<body>
+    <div class="body">
+        <div id="DragRace">
+            <div id="mypre">
+                <h2><b>What is Drag Racing </b></h2>
+
+                <p class="text">
+                    Drag Racing is a type of motor racing in which motorcycles or automobiles compete in races. These races happen with only two cars racing eachother,
+                    no more than 2. Whoever crosses the finish line first is the winner of the race. The race normally has a distance that is around 1000ft to around 1500ft,
+                    Electronic timing is normally used to time this race.Drag racing can be illegal street racing or a regulated motorsport.
+                </p>
+                <div class="formula-2">
+                    <figure class="figcaption">
+                        <a target="_blank" href="~/Images/Photos/Drag Racing 1.jpeg" class="imgclick">
+                            <img src="~/Images/Photos/Drag Racing 1.jpeg" alt="Drag Racing" class="f1h" style="width: 500px; height:250px;" />
+                        </a>
+                    </figure>
+                </div>
+                <p class="text">
+                    Before each race, each driver is allowed to perform a burnout by spinning the driving tires. Burnouts heat the driving tires and lay rubber down at the
+                    beginning of the track to improve traction.The drivers then line up at the starting line. Races are started electronically by a system known as a Christmas tree.
+                    Below the staging lights are three large amber lights, a green light, and a red light. When both drivers are staged, the tree is set to start the race causing
+                    the three large amber lights to illuminate, followed by the green light. If the front tires leave the starting line before the green light illuminates,
+                    the red light for that driver's lane illuminates instead. This indicates disqualification (unless a more serious violation occurs). Once a driver commits a red-light
+                    foul (also known as redlighting), the other driver can also commit a foul start by leaving the line too early but still win, having left later. Should both drivers
+                    leave after the green light illuminates, the one leaving first is said to have a holeshot advantage.
+                </p>
+                <p class="text">
+                    The first vehicle to cross the finish line wins the race. The elapsed time is a measure of performance only; it does not determine the winner.Elapsed time
+                    does not include reaction time and each lane is timed separately, a car with a slower elapsed time can actually win if that driver's holeshot advantage exceeds
+                    the elapsed time difference. This is known as a holeshot win.
+                    Several measurements are taken for each race: reaction time, elapsed time, and speed. Reaction time is the period from the lighting of the green light to
+                    the vehicle leaving the starting line. Elapsed time is the time from the vehicle leaving the starting line to crossing the finish line. Speed is measured
+                    through a speed trap covering the final 66 feet (20 m) to the finish line, indicating the approximate maximum speed of the vehicle during the run.
+                    In the standard racing format, the losing car and driver are removed from the contest and the winner goes on to race other winners. This continues
+                    until only one is left.
+                </p>
+
+                <div class="formula-2">
+                    <figure class="figcaption">
+                        <a target="_blank" href="~/Images/Photos/Drag Racing 2.jpg" class="imgclick">
+                            <img src="~/Images/Photos/Drag Racing 2.jpg" alt="Drag Racing" class="f1h" style="width: 500px; height:250px;" />
+                        </a>
+                    </figure>
+                </div>
+
+                <h2>History of Drag Racing </h2>
+                <p class="text">
+                    Drag racing seems like it’s been with us forever. In truth it’s a postwar phenomenon, with roots stretching back to dry lakebed racing in Southern
+                    California in the 1930s. From those humble beginnings to modern times, when a modern Top Fueler can go 0-1000 feet in a tick over three seconds at
+                    speeds topping 330mph, we present a brief history of drag racing, hitting important milestones along the never-ending quest for the perfect pass.
+                </p>
+
+                <div class="formula-2">
+                    <figure class="figcaption">
+                        <a target="_blank" href="~/Images/Photos/Drag Racing 3.jpg" class="imgclick">
+                            <img src="~/Images/Photos/Drag Racing 3.jpg" alt="Drag" class="f1h" style="width: 500px; height:250px;" />
+                        </a>
+                    </figure>
+                </div>
+                <p class="text">
+                    The First time drag racing ever started was in 1913, Wallace Gordon Parks was born in Goltry, Oklahoma. His family moved to Southern California in the
+                    early ‘20s. Drag racing continued for many many years, it was in 1941 during the world war 2 and was starting to become very popular. Drag Racing continued
+                    for many years becoming more and more popular by the decades it was around for. It finally ended in 2015 with a alculated power of a Top Fuel engine is now
+                    between 8500 and 10,000hp, with 6,000 foot-pounds of torque.
+                </p>
+                <button type="button" class="button button" onclick="location.href ='@Url.Action("Index","Home")'">Back</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

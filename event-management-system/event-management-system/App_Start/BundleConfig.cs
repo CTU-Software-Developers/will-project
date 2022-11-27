@@ -57,6 +57,17 @@ namespace event_management_system
             
             bundles.Add(new ScriptBundle("~/bundles/user_code_popup").Include(
                       "~/Scripts/User_code_popup_window.js"));
+
+            bundles.Add(new StyleBundle("~/Content/DragRacing").Include(
+                      "~/Content/DragRacing.css"));
+            bundles.Add(new StyleBundle("~/Content/Driftmasters").Include(
+                      "~/Content/Driftmasters.css"));
+            bundles.Add(new StyleBundle("~/Content/Formula1History").Include(
+                      "~/Content/Formula1History.css"));
+            bundles.Add(new StyleBundle("~/Content/StockCarRacing").Include(
+                      "~/Content/StockCarRacing.css"));
+            bundles.Add(new StyleBundle("~/Content/WorldEndurance").Include(
+                      "~/Content/WorldEndurance.css"));
         }
     }
 }
