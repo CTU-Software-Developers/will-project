@@ -1,0 +1,95 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Page created by Karvisha Armugam-->
+
+@{
+    ViewBag.Title = "Stock Car Racing";
+}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=opera" />
+    <meta http-equiv="X-UA-Compatible" content="IE=brave" />
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome" />
+    <meta http-equiv="X-UA-Compatible" content="IE=moz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag Racing</title>
+    <link rel="stylesheet" href="~/Content/StockCar.css" type="text/css" />
+    @Styles.Render("~/Content/StockCarRacing.css");
+</head>
+<body>
+    <div class="body">
+        <div id="StockCar">
+            <div id="mypre">
+                <h2><b>What is Stock Car Racing </b></h2>
+                <p class="text">
+                    Stock car racing is a form of automobile racing run on oval tracks and road courses measuring approximately 0.25 to 2.66 miles
+                    (0.4 to 4.3 km). It originally used production-model cars, hence the name "stock car", but is now run using cars specifically
+                    built for racing. It originated in the southern United States; the world's largest governing body is the American NASCAR. Its NASCAR
+                    Cup Series is the premier top-level series of professional stock car racing. Australia, Canada, New Zealand, Mexico, Brazil and the United Kingdom
+                    also have forms of stock car racing. Top-level races typically range between 200 and 600 miles (322 and 966 km) in length.
+                </p>
+                <div class="formula-2">
+                    <figure class="figcaption">
+                        <a target="_blank" href="~/Images/Photos/Stock car 1.jpg" class="imgclick">
+                            <img src="~/Images/Photos/Stock car 1.jpg" alt="Stock Car Racing" class="f1h" style="width: 500px; height:250px;" />
+                        </a>
+                    </figure>
+                </div>
+
+                <p class="text">
+                    Top-level stock cars exceed 200 mph (322 km/h) at speedway tracks and on superspeedway tracks such as Daytona International Speedway and
+                    Talladega Superspeedway. Contemporary NASCAR-spec top-level cars produce maximum power outputs of 860–900 hp from their naturally
+                    aspirated V8 engines. In October 2007 American race car driver Russ Wicks set a speed record for stock cars in a 2007-season Dodge Charger built to
+                    NASCAR specifications by achieving a maximum speed of 244.9 mph (394.1 km/h) at Bonneville Speedway.
+                    For the 2015 NASCAR Cup Series, power output of the competing cars ranged from 750 to 800 hp (560 to 600 kW).
+                </p>
+
+                <h2><b>Types of Stock Cars </b></h2>
+
+                <div class="formula-2">
+                    <figure class="figcaption">
+                        <a target="_blank" href="~/Images/Photos/Stock Car 2.jpg" class="imgclick">
+                            <img src="~/Images/Photos/Stock Car 2.jpg" alt="Stock Car Race" class="f1h" style="width: 500px; height:250px;" />
+                        </a>
+                    </figure>
+                </div>
+                <p class="text">
+                    A stock car, in the original sense of the term, is an automobile that has not been modified from its original factory configuration. Later the term
+                    stock car came to mean any production-based automobile used in racing. This term is used to differentiate such a car from a "race car", a special,
+                    custom-built car designed only for racing purposes. The degree to which the cars conform to standard model specs has changed over the years and varies
+                    from country to country. Today most American stock cars may superficially resemble standard American family sedans but are in fact silhouette cars:
+                    purpose-built racing machines built to a strict set of regulations governing the car design ensuring that the chassis, suspension, engine, etc. are
+                    architecturally identical to those in stock production vehicles. For example, NASCAR Cup Series race vehicles now require fuel injection. In the UK and
+                    New Zealand there is a racing formula called stock cars, but the cars are markedly different from any road car. In Australia there was a formula that was
+                    quite similar to NASCAR called AUSCAR.
+                    The Racecar-Euro Series began in 2009 and was sanctioned by NASCAR as a touring series in 2012, currently operating as the NASCAR Whelen Euro Series.
+                </p>
+                <h2><b>Types of Tracks in Stock Car Racing </b></h2>
+                <p class="text">
+                    Stock car races take place predominantly on oval tracks of 3 or 4 turns, with all turns to the left. Oval tracks are classified as short track (less than 1 mile),
+                    intermediate or speedway (1 to 2 miles) or superspeedway (over 2 miles). Road courses are any tracks having both left and right turns. Depending on the track,
+                    typical race speeds can vary from 90 miles per hour (140 km/h) at Martinsville to over 200 miles per hour (320 km/h) at Talladega. In 1987 Bill Elliott's
+                    212.809 mph (342.483 km/h) qualifying time at Talladega brought about a change at superspeedways (Daytona and Talladega). Such high speeds and Bobby
+                    Allison's car going airborne into the catch-fence and injuring fans forced NASCAR to implement power-reducing measures, one of which was the mandated
+                    implement of below carburetor restrictor plates. This later became known as restrictor plate racing. Oval circuits differ from the rough terrain and sharp
+                    turns of Rally, and the complicated twists and turns of Formula One tracks that put up to 5 or 6 g of horizontal stress on the driver's body. Stock cars are
+                    much heavier than Formula One cars, and as a result they are generally slower. Additionally, they cannot produce the g-forces of an open wheel car. A stock
+                    car's weak handling with high power output places more emphasis on car control
+                </p>
+                <div class="formula-2">
+                    <figure class="figcaption">
+                        <a target="_blank" href="~/Images/Photos/Stock car 3.jpg" class="imgclick">
+                            <img src="~/Images/Photos/Stock Car 3.jpeg" alt="Stock Car" class="f1h" style="width: 500px; height:250px;" />
+                        </a>
+                    </figure>
+                </div>
+            </div>
+            <button type="button" class="button button" onclick="location.href ='@Url.Action("Index","Home")'">Back</button>
+        </div>
+    </div>
+</body>
+</html>

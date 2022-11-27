@@ -1,0 +1,94 @@
+﻿/*! Page Created by Karvisha Armugam */
+* {
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+figcaption {
+    position: relative;
+    float: none;
+    width: 170px;
+    font-size: 8pt;
+    font-weight: 500;
+    margin: 6px auto auto auto;
+    line-height: 1;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px solid;
+    margin-bottom: 6px;
+}
+
+.imgclick:hover {
+    text-decoration: none;
+}
+
+#myDiv {
+    border: solid black;
+    background-color: lightgray;
+    border-width: thin;
+}
+
+#mypre {
+    font-size: medium;
+    text-align: left;
+    background-color: lightgray;
+    overflow-x: hidden;
+}
+
+.text {
+    margin-right: 3%;
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+.body {
+    text-align: center;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+    border-color: red;
+}
+
+.button {
+    float: left;
+    background-color: #A9A9A9;
+    color: white;
+    padding: 5px 15px;
+    margin-left: 10px;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.f1h {
+    margin-top: -5%;
+    margin-bottom: -5%;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: -1%;
+    margin-right: 60%;
+    animation-name: FadeIn;
+    animation-duration: 5s;
+    overflow-y: hidden;
+}
+
+@keyframes FadeIn {
+    1% {
+        Opacity: 1%
+    }
+
+    100% {
+        Opacity: 100%
+    }
+}
+
+.formula-2 {
+    margin-left: 25%;
+}

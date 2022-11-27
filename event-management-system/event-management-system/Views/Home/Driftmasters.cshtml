@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Drifmasters";
+}
+<head>
+    <link rel="Stylesheet" href="~/Content/Driftmasters.css" type="text/css" />
+    @Styles.Render("~/Content/Driftmasters.css");
+</head>
+<style>
+</style>
+<div id="myDiv">
+    <div id="mypre">
+        <h2><b>What is Drift Masters</b></h2>
+
+        <div class="formula-2">
+            <figure class="figcaption">
+                <a target="_blank" href="~/Images/Photos/Drift singles.jpg" class="imgclick">
+                    <img src="~/Images/Photos/Drift singles.jpg" alt="World endurance" class="f1h" style="width: 450px; height:250px;" />
+                </a>
+            </figure>
+        </div>
+        <p class="text">
+            What is drifting?
+            Drifting is a driving style in which the driver uses the throttle, brakes, clutch, gear shifting and steering input to keep
+            the car in a state of oversteer while maneuvering from turn to turn. Drifters emphasize car control by coordinating the amount
+            of counter-steer (or opposite lock) with the simultaneous modulation of the throttle and brakes to shift the weight balance of
+            the car back and forth through the turns. Furthermore, they strive to achieve this while adhering to the standard racing lines
+            (or designated “clipping points” if drifting in competition) and maintaining extreme slip angles. It is the most difficult,
+            demanding and exciting way to drive a car on a track.
+        </p>
+        <h2>
+            <b>What are professional drift competitions?</b>
+        </h2>
+        <div class="formula-2">
+            <figure class="figcaption">
+                <a target="_blank" href="~/Images/Photos/drift tandem.jpg" class="imgclick">
+                    <img src="~/Images/Photos/drift tandem.jpg" alt="World endurance" class="f1h" style="width: 450px; height:250px;" />
+                </a>
+            </figure>
+        </div>
+        <p class="text">
+            As with any sport,
+            casual drifters quickly reached a level where they wanted to test their skills against other
+            drivers in a competition format. Professional level drifting competitions are hugely exhilarating and
+            will often feature some of the most exciting driving you’re ever likely to see.
+            The competitors aim to complete a pre-defined course (as laid out by the nominated judges)
+            while sticking as closely to the judged criteria as possible, earning points for their proximity to the clipping points,
+            their speed throughout the course and, most importantly, the amount of style with which they do so.
+            Slow drifting with a lack of commitment will get marked down, while fast, intense drifting will rack up the points!
+            After their individual qualification runs,
+            drivers are paired up against each other for ‘twin battles’ as they are commonly known.
+            Run to a knockout format, the aim is for the chase driver to follow the lead driver as closely as possible,
+            sitting door-to-door at massive speeds, all while sideways and with smoke billowing off the rear tires.
+            These battles are the real highlight of competitive drifting and provide some of the biggest
+            entertainment available in competitive motorsport.
+        </p>
+        <h2><b>History of Drift Masters</b></h2>
+        <div class="formula-2">
+            <figure class="figcaption">
+                <a target="_blank" href="~/Images/Photos/old skool drift.jpg" class="imgclick">
+                    <img src="~/Images/Photos/old skool drift.jpg" alt="World endurance" class="f1h" style="width: 450px; height:250px;" />
+                </a>
+            </figure>
+        </div>
+        <p class="text">
+            The Drift Masters European Championship
+            Since its inception in 2014, the Drift Masters European Championship (DMEC) has evolved from humble beginnings
+            of a 3-round series on a small custom-built circuit to what was is now recognized as the greatest drift championship on the continent
+            with alliances across the globe. Year on year growth has not only seen driver numbers increase but also spectator
+            figures, in attendance and online. We expanded the numbers of events to five in 2015, on to a constant six from 2016- 2019.The pesky COVID-19
+            got in the way meaning that in 2020 there was just 1 DMEC event, with us then managing 2 double-header weekends in 2021. In 2022 though,
+            we’re back on track with a full 6-event calendar taking place across 6 different countries. DMEC as a championship has eclipsed and surpassed all
+            expectations in such a short period of time but one trait has been constant throughout, professionality. With the main nature
+            of our business being high-speed motorsport, enforcing strict safety regulations from the offset will always be a core value to the DMEC team.
+            When it comes to designing our drift venues, creativity is key. Each year brings the championship to new and exciting venues. From fully custom-built
+            drift arenas constructed within professional football stadiums to taking over Formula One race circuits, DMEC has no boundaries.
+            The championship itself may be based within the continent of Europe but it’s reach and following spreads across the globe. Such is the desire to drive
+            in the championship, the DMEC grid has featured drivers from the Europe, USA, South America, Middle East, Asia and more.
+        </p>
+    </div>
+    <button type="button" class="button button" onclick="location.href ='@Url.Action("Index","Home")'">Back</button>
+</div>
+

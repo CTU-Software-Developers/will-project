@@ -96,6 +96,27 @@ namespace event_management_system.Controllers
             return View();
         }
 
+        public ActionResult DragRacing()
+        {
+            return View();
+        }
+        public ActionResult Driftmasters()
+        {
+            return View();
+        }
+        public ActionResult Formula1History()
+        {
+            return View();
+        }
+        public ActionResult StockCarRacing()
+        {
+            return View();
+        }
+        public ActionResult WorldEndurance()
+        {
+            return View();
+        }
+
 
         //Review Page with commenting section start
         public ActionResult ReviewComments()
